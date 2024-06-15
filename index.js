@@ -1,17 +1,4 @@
 
-function loadHTML(elementId, url) {
-fetch(url)
-.then(response => response.text())
-.then(data => {
-document.getElementById(elementId).innerHTML = data;
-})
-.catch(error => console.log('Error loading HTML: ', error));
-}
-loadHTML('header-placeholder', 'https://kaloodinaz.github.io/header.html');
-loadHTML('footer-placeholder', 'https://kaloodinaz.github.io/footer.html');
-loadHTML('catalog-placeholder', 'https://kaloodinaz.github.io/catalog.html');
-loadHTML('social-placeholder', 'https://kaloodinaz.github.io/social.html');
-
 //load iframe js
 var iframe = document.getElementById("iframehtml5");
 var startImg = document.getElementById("start-img");
