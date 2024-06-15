@@ -16,30 +16,39 @@ function loadGame() {
     title.style.display = "none";
     gameStarted = true;
 }
+
+let mobile_menu = document.querySelector(".mobile-menu");
+if (mobile_menu) {
+    mobile_menu.addEventListener('click', function (e) {
+        e.stopPropagation();
+    });
+}
+
+document.addEventListener('click', function () {
+    if (mobile_menu) {
+        mobile_menu.style.right = "-310px";
+    }
+});
+
 //mobile menu
 let mobile_icon = document.querySelector(".mobile-icon");
 let mobile_close_icon = document.querySelector(".mobile-close");
-let mobile_menu = document.querySelector(".mobile-menu");
+
 if (mobile_icon) {
     mobile_icon.addEventListener('click', function (e) {
         document.querySelector(".mobile-menu").style.right = "0";
         e.stopPropagation();
-    })
+    });
 }
+
 if (mobile_close_icon) {
     mobile_close_icon.addEventListener('click', function (e) {
         document.querySelector(".mobile-menu").style.right = "-310px";
-    })
+    });
 }
-mobile_menu.addEventListener('click', function (e) {
-    e.stopPropagation();
-})
-document.addEventListener('click', function () {
-    document.querySelector(".mobile-menu").style.right = "-310px";
-})
-
 
 var gameStarted = false;
+
 
 function toggleFullscreen() {
   var iframe = document.getElementById("iframehtml5");
