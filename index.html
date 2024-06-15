@@ -2,8 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Catalog by Kaloo Dinaz</title>
+    <title>Games Catalog by Kaloo Dinaz</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow" />
+<meta name="apple-mobile-web-app-status-bar" content="#232323" />
+<meta name="theme-color" content="#232323" />
+<link rel="manifest" href="/manifest.json" />
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="description" content="">
+<link rel="canonical" href="https://kaloodinaz.github.io/" />
+<link rel="shortcut icon" href="/icons/icon-72x72.png">
+<link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
+
    <style>
 .game-list {
     display: grid;
@@ -36,10 +46,19 @@
            display: block;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
-
+footer{margin-top:auto;background-color:#232427;padding:5px 0}
+.menu-footer-bar{text-align:center}
+.link{display:inline-block;color:#fff;font-size:16px;margin:0;padding:5px 15px}
+.link:hover{text-decoration:underline}
+.nav-link:hover{color:#afafaf}
      </style>
 </head>
 <body>
+    <script>
+if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/sw.js')
+.then(registration => {console.log('Service Worker registered successfully:', registration);})
+.catch(error => {console.log('Error in Service Worker registration:', error);});});}
+</script>
     <h1>Game Catalog by Kaloo Dinaz</h1>
     <div class="game-list">
         <div class="game">
@@ -127,6 +146,15 @@
     </div>
  <footer>
         <p>&copy; 2024 Game Catalog by Kaloo Dinaz</p>
+     <div class="container">
+<div class="row">
+<div class="menu-footer-bar">
+<a class="link" href="/privacy.html">Privacy Policy</a>
+<a class="link" href="/termofuse.html">Term of use</a>
+<a class="link" href="mailto:support@kaloodinaz.github.io">Contact</a>
+</div>
+</div>
+</div>
     </footer>
 </body>
 </html>
