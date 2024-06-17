@@ -1,4 +1,4 @@
-         let gameStarted = false;
+        let gameStarted = false;
 
         function loadHTML(elementId, url) {
             return fetch(url)
@@ -9,6 +9,22 @@
                 .catch(error => console.log('Error loading HTML: ', error));
         }
 
+        function loadGame() {
+            var iframe = document.getElementById("iframehtml5");
+            var startImg = document.getElementById("start-img");
+            var startBtn = document.getElementById("start-btn");
+            var title = document.getElementById("game-title");
+
+            if (iframe) {
+                iframe.src = iframe.dataset.oldsrc;
+                iframe.style.display = "block";
+            }
+            if (startImg) startImg.style.display = "none";
+            if (startBtn) startBtn.style.display = "none";
+            if (title) title.style.display = "none";
+            gameStarted = true;
+        }
+
         document.addEventListener('DOMContentLoaded', () => {
             Promise.all([
                 loadHTML('header-placeholder', 'https://kaloodinaz.github.io/header.html'),
@@ -16,24 +32,11 @@
                 loadHTML('catalog-placeholder', 'https://kaloodinaz.github.io/catalog.html'),
                 loadHTML('social-placeholder', 'https://kaloodinaz.github.io/social.html')
             ]).then(() => {
-                var iframe = document.getElementById("iframehtml5");
                 var startImg = document.getElementById("start-img");
                 var startBtn = document.getElementById("start-btn");
-                var title = document.getElementById("game-title");
 
                 if (startImg) startImg.addEventListener("click", loadGame);
                 if (startBtn) startBtn.addEventListener("click", loadGame);
-
-                function loadGame() {
-                    if (iframe) {
-                        iframe.src = iframe.dataset.oldsrc;
-                        iframe.style.display = "block";
-                    }
-                    if (startImg) startImg.style.display = "none";
-                    if (startBtn) startBtn.style.display = "none";
-                    if (title) title.style.display = "none";
-                    gameStarted = true;
-                }
 
                 let mobile_icon = document.querySelector(".mobile-icon");
                 let mobile_close_icon = document.querySelector(".mobile-close");
