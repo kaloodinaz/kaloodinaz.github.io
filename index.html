@@ -3,53 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <title>Games Catalog by Kaloo Dinaz</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="robots" content="index, follow" />
-<meta name="apple-mobile-web-app-status-bar" content="#232323" />
-<meta name="theme-color" content="#232323" />
-<link rel="manifest" href="/manifest.json" />
-<meta name="apple-mobile-web-app-capable" content="yes"/>
-<meta name="description" content="">
-<link rel="canonical" href="https://kaloodinaz.github.io/" />
-<link rel="shortcut icon" href="/icons/icon-72x72.png">
-<link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
-<style>
-.game-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;padding:20px}
-.game{position:relative;border:1px solid #ccc;border-radius:10px;overflow:hidden;box-shadow:0 4px 8px rgba(0,0,0,0.1);transition:box-shadow .3s ease}
-.game img{width:100%;height:100%;object-fit:cover}
-footer{background-color:#333;color:#fff;padding:10px;text-align:center}
-.game:hover{display:block;box-shadow:0 8px 16px rgba(0,0,0,0.2)}
-footer{margin-top:auto;background-color:#232427;padding:5px 0}
-.menu-footer-bar{text-align:center}
-.link{display:inline-block;color:#fff;font-size:16px;margin:0;padding:5px 15px}
-.link:hover{text-decoration:underline}
-.nav-link:hover{color:#afafaf}
-</style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow" />
+    <meta name="apple-mobile-web-app-status-bar" content="#232323" />
+    <meta name="theme-color" content="#232323" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="description" content="">
+    <link rel="canonical" href="https://kaloodinaz.github.io/" />
+    <link rel="shortcut icon" href="/icons/icon-72x72.png">
+    <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
+    <style>
+        .game-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .game {
+            position: relative;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: box-shadow .3s ease;
+        }
+        .game img {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+        }
+        .game:hover {
+            display: block;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        footer {
+            margin-top: auto;
+            background-color: #232427;
+            padding: 5px 0;
+            color: #fff;
+            text-align: center;
+        }
+        .menu-footer-bar {
+            text-align: center;
+        }
+        .link {
+            display: inline-block;
+            color: #fff;
+            font-size: 16px;
+            margin: 0;
+            padding: 5px 15px;
+        }
+        .link:hover {
+            text-decoration: underline;
+        }
+        .nav-link:hover {
+            color: #afafaf;
+        }
+    </style>
 </head>
 <body>
-<script>
-if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/sw.js')
-.then(registration => {console.log('Service Worker registered successfully:', registration);})
-.catch(error => {console.log('Error in Service Worker registration:', error);});});}
-</script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => {
+                        console.log('Service Worker registered successfully:', registration);
+                    })
+                    .catch(error => {
+                        console.log('Error in Service Worker registration:', error);
+                    });
+            });
+        }
+    </script>
     <h1>Game Catalog by Kaloo Dinaz</h1>
     <div class="game-list">
         <div class="game">
             <a href="https://watermelongame.pages.dev" target="_blank" rel="noopener">
                 <img loading="lazy" src="https://watermelongame.pages.dev/maskable_icon_x192.png" alt="Watermelon Game">
-                
             </a>
         </div>
         <div class="game">
             <a href="https://coreballgame.pages.dev" target="_blank" rel="noopener">
                 <img loading="lazy" src="https://coreballgame.pages.dev/favicon.png" alt="Core Ball Game">
-                 
             </a>
         </div>
-  <div class="game">
+        <div class="game">
             <a href="https://macaroni-art.pages.dev" target="_blank" rel="noopener">
                 <img loading="lazy" src="https://macaroni-art.pages.dev/icons/icon-192x192.png" alt="Macaroni Art">
-              
             </a>
         </div>
         <div class="game">
@@ -62,7 +104,6 @@ if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigat
                 <img loading="lazy" src="https://jelly-truck.pages.dev/assets/img/truck2_icon.png" alt="Jelly Truck">
             </a>
         </div>
-       
         <div class="game">
             <a href="https://bitlife-online.com/" target="_blank" rel="noopener">
                 <img loading="lazy" src="https://bitlife-online.pages.dev/icons/icon-192x192.png" alt="BitLife Online">
@@ -93,7 +134,6 @@ if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigat
                 <img loading="lazy" src="https://heardle-game.pages.dev/icons/icon-192x192.png" alt="Heardle Game">
             </a>
         </div>
-
         <div class="game">
             <a href="https://jelly-truck.com/" target="_blank" rel="noopener">
                 <img loading="lazy" src="https://jellytruckgame.pages.dev/icons/icon-192x192.png" alt="Jelly Truck">
@@ -109,25 +149,24 @@ if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigat
                 <img loading="lazy" src="https://slitherio.pages.dev/icons/icon-192x192.png" alt="SlitherIO Online">
             </a>
         </div>
-
         <div class="game">
             <a href="https://2048cupcakes.co.uk/" target="_blank" rel="noopener">
                 <img loading="lazy" src="https://2048-cupcakes.pages.dev/style/img/icon-192x192.png" alt="2048 Cupcakes">
             </a>
         </div>
-      
     </div>
- <footer>
+    <footer>
         <p>&copy; 2024 Game Catalog by Kaloo Dinaz</p>
-     <div class="container">
-<div class="row">
-<div class="menu-footer-bar">
-<a class="link" href="/privacy.html">Privacy Policy</a>
-<a class="link" href="/termofuse.html">Term of use</a>
-<a class="link" href="mailto:support@kaloodinaz.github.io">Contact</a>
-</div>
-</div>
-</div>
+        <div class="container">
+            <div class="row">
+                <div class="menu-footer-bar">
+                    <a class="link" href="/privacy.html">Privacy Policy</a>
+                    <a class="link" href="/termofuse.html">Term of use</a>
+                    <a class="link" href="mailto:support@kaloodinaz.github.io">Contact</a>
+                </div>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
+
