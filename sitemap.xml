@@ -136,6 +136,11 @@
         <priority>0.8</priority>
     </url>
     <url>
+        <loc>https://kaloodinaz.github.io/game/do-a-barrel-roll-20-times/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
         <loc>https://kaloodinaz.github.io/2048-cupcakes</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
