@@ -126,6 +126,11 @@
         <priority>0.8</priority>
     </url>
     <url>
+        <loc>https://kaloodinaz.github.io/game/2048/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
         <loc>https://kaloodinaz.github.io/doge2048/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
@@ -141,7 +146,7 @@
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://kaloodinaz.github.io/2048-cupcakes</loc>
+        <loc>https://kaloodinaz.github.io/2048-cupcakes/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
