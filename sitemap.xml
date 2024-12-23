@@ -201,6 +201,51 @@
         <priority>0.8</priority>
     </url>
     <url>
+        <loc>https://kaloodinaz.github.io/game/2048-et/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://kaloodinaz.github.io/game/2048-lv/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://kaloodinaz.github.io/game/2048-lt/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://kaloodinaz.github.io/game/2048-ro/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://kaloodinaz.github.io/game/2048-sk/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://kaloodinaz.github.io/game/2048-sl/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://kaloodinaz.github.io/game/2048-hu/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://kaloodinaz.github.io/game/2048-cs/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://kaloodinaz.github.io/game/2048-no/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
         <loc>https://kaloodinaz.github.io/doge2048/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
