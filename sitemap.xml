@@ -196,6 +196,11 @@
         <priority>0.8</priority>
     </url>
     <url>
+        <loc>https://kaloodinaz.github.io/game/2048-bg/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
         <loc>https://kaloodinaz.github.io/doge2048/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
