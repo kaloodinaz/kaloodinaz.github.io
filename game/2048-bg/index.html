@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="utf-8">
+    <link rel="manifest" href="https://kaloodinaz.github.io/2048-online/manifest.json"/>
+<meta name="theme-color" content="#151515" />
+  <title>2048 игра | Играйте пъзел игра 2048</title>
+<meta name="description" content="Открийте 2048 българска версия – популярната игра за логика и математика, адаптирана на български. Играйте безплатно онлайн и подобрете уменията си!">
+  <link href="https://kaloodinaz.github.io/2048-online/main.css" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="https://kaloodinaz.github.io/2048-online/favicon.ico">
+  <link rel="apple-touch-icon" href="https://kaloodinaz.github.io/2048-online/icons/apple-touch-icon.png">
+  <link rel="apple-touch-startup-image" href="https://kaloodinaz.github.io/2048-online/icons/apple-touch-startup-image-640x1096.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)"> <!-- iPhone 5+ -->
+  <link rel="apple-touch-startup-image" href="https://kaloodinaz.github.io/2048-online/icons/apple-touch-startup-image-640x920.png"  media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)"> <!-- iPhone, retina -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <script>
+      if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('https://kaloodinaz.github.io/2048-online/sw.js')
+      .then(registration => {console.log('Service Worker registered successfully:', registration);})
+      .catch(error => {console.log('Error in Service Worker registration:', error);});});}
+      </script>
+  <div class="container">
+    <div class="heading">
+      <h1 class="title">2048</h1>
+      <div class="scores-container">
+        <div class="score-container">0</div>
+        <div class="best-container">0</div>
+      </div>
+    </div>
+
+    <div class="above-game">
+      <p class="game-intro">Присъединете се към числата и стигнете до <strong>2048 плочки!</strong></p>
+      <a class="restart-button">Нова игра</a>
+    </div>
+
+  
+    <div class="game-container">
+      <div class="game-message">
+        <p></p>
+        <div class="lower">
+	        <a class="keep-playing-button">Продължавай</a>
+          <a class="retry-button">Опитайте отново</a>
+        </div>
+      </div>
+
+      <div class="grid-container">
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+      </div>
+
+      <div class="tile-container">
+
+      </div>
+    </div>
+
+    <p class="game-explanation">
+      <strong class="important">Как се играе:</strong> Използвайте клавишите със стрелки, за да местите плочките. Когато две плочки с еднакъв номер се докоснат, те се сливат в една!
+    </p>
+    <hr>
+
+  <div class="block block-728"><script type="text/javascript">
+	atOptions = {
+		'key' : 'd1d26e15f7c349fd8e403bb5ea491a31',
+		'format' : 'iframe',
+		'height' : 90,
+		'width' : 728,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/d1d26e15f7c349fd8e403bb5ea491a31/invoke.js"></script></div>
+    <div class="block block-300"><script type="text/javascript">
+	atOptions = {
+		'key' : '0fee57062f9bb330edc13a4e4349876d',
+		'format' : 'iframe',
+		'height' : 250,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/0fee57062f9bb330edc13a4e4349876d/invoke.js"></script></div>
+
+	  
+    <p>
+    <strong class="important">Забележка:</strong> Този сайт е официалната версия на играта 2048. Можете да я играете на телефона си чрез този. Всички други приложения или сайтове са производни или фалшиви и трябва да се използват с повишено внимание.
+    </p>
+    <hr>
+  <h1>2048 българска версия – Умната игра за всеки</h1>
+<p>2048 българска версия - Играйте онлайн и се забавлявайте!</p>
+       <h2>Какво представлява 2048?</h2>
+                <p>2048 е популярна игра с пъзели, която комбинира логика, математика и стратегия. Целта на играта е да комбинирате плочките с числа, докато достигнете плочка с числото 2048. Българската версия на играта е специално адаптирана за местните играчи, като предлага интерфейс и инструкции на български език.</p>
+           <h2>Защо да играете 2048 на български?</h2>
+                <ul>
+                    <li><strong>Лесно и удобно:</strong> Интуитивният интерфейс на български прави играта достъпна за всички.</li>
+                    <li><strong>Образователно:</strong> Подобрява логическото мислене и уменията за планиране.</li>
+                    <li><strong>Забавно:</strong> Играта е перфектна за убиване на време и предизвикателства с приятели.</li>
+                </ul>
+  <h2>Как да играете 2048?</h2>
+                <p>Правилата на играта са прости:</p>
+                <ol>
+                    <li>Премествайте плочките със стрелките на клавиатурата или с плъзгане на екрана.</li>
+                    <li>Когато две плочки с еднакви числа се сблъскат, те се обединяват в нова плочка със сума от двете числа.</li>
+                    <li>Продължавайте да комбинирате, докато достигнете плочка с числото 2048 или повече!</li>
+                </ol>
+<h2>Играйте 2048 българска версия сега!</h2>
+                <p>Независимо дали сте нов в играта или ветеран, българската версия на 2048 предлага приятно изживяване за всички възрасти. Кликнете на линка долу и започнете да играете още сега!</p>
+              
+    <div class="block block-728"><script type="text/javascript">
+	atOptions = {
+		'key' : 'd1d26e15f7c349fd8e403bb5ea491a31',
+		'format' : 'iframe',
+		'height' : 90,
+		'width' : 728,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/d1d26e15f7c349fd8e403bb5ea491a31/invoke.js"></script></div>
+    <div class="block block-300"><script type="text/javascript">
+	atOptions = {
+		'key' : '0fee57062f9bb330edc13a4e4349876d',
+		'format' : 'iframe',
+		'height' : 250,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/0fee57062f9bb330edc13a4e4349876d/invoke.js"></script></div>
+
+
+     <hr>    <p>&copy; 2024 Всички права запазени. Играйте 2048 и се забавлявайте!</p>
+<p>
+By <a target="_blank" href="https://kaloodinaz.github.io/">Kaloo Dinaz Games</a>
+
+    </p>
+  </div>
+<script defer src="https://kaloodinaz.github.io/2048-online/main.js"></script>
+</body>
+</html>
