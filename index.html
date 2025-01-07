@@ -1,189 +1,635 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US" prefix="og: https://ogp.me/ns#">
 <head>
-    <meta charset="UTF-8">
-    <title>IO Games | Play Online by Kaloo Dinaz</title>
-    <meta name="description" content="Discover IO Games, where fun meets creativity! Explore a world of engaging & educational games designed to inspire young minds. Perfect for kids & families, io games offers interactive experiences that combine learning with play">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="index, follow" />
-    <meta name="apple-mobile-web-app-status-bar" content="#232323" />
-    <meta name="theme-color" content="#232323" />
-    <link rel="manifest" href="/manifest.json" />
-    <meta name="apple-mobile-web-app-capable" content="yes"/>
-    <meta name="description" content="">
-    <link rel="canonical" href="https://kaloodinaz.github.io/" />
-    <link rel="shortcut icon" href="/icons/icon-72x72.png">
-    <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
-    <style>
-        .game-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            padding: 20px;
-        }
-        .game {
-            position: relative;
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: box-shadow .3s ease;
-        }
-        .game img {
-            width: 100%;
-            height: auto;
-            aspect-ratio: 1/1;
-            object-fit: cover;
-        }
-        .game:hover {
-            display: block;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        }
-        footer {
-            margin-top: auto;
-            background-color: #232427;
-            padding: 5px 0;
-            color: #fff;
-            text-align: center;
-        }
-        .menu-footer-bar {
-            text-align: center;
-        }
-        .link {
-            display: inline-block;
-            color: #fff;
-            font-size: 16px;
-            margin: 0;
-            padding: 5px 15px;
-        }
-        .link:hover {
-            text-decoration: underline;
-        }
-        .nav-link:hover {
-            color: #afafaf;
-        }
-    </style>
-</head>
-<body>
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/sw.js')
-                    .then(registration => {
-                        console.log('Service Worker registered successfully:', registration);
-                    })
-                    .catch(error => {
-                        console.log('Error in Service Worker registration:', error);
-                    });
-            });
-        }
-    </script>
-    <h1>Game Catalog by Kaloo Dinaz</h1>
-    <div class="game-list">
-                <div class="game">
-            <a href="https://suikagamejp.com/en/" target="_blank" rel="noopener">
-                <img loading="lazy" src="https://suikajp.pages.dev/icons/icon-384x384.png" alt="Suika Game Online">
-            </a>
-        </div>
-        <div class="game">
-            <a href="https://watermelongame.pages.dev/" target="_blank" rel="noopener">
-                <img loading="lazy" src="https://watermelongame.pages.dev/maskable_icon_x192.png" alt="Watermelon Game">
-            </a>
-        </div>
-        <div class="game">
-            <a href="https://coreballgame.pages.dev/" target="_blank" rel="noopener">
-                <img loading="lazy" src="https://coreballgame.pages.dev/favicon.png" alt="Core Ball Game">
-            </a>
-        </div>
-        <div class="game">
-            <a href="https://macaroni-art.pages.dev" target="_blank" rel="noopener">
-                <img loading="lazy" src="https://macaroni-art.pages.dev/icons/icon-192x192.png" alt="Macaroni Art">
-            </a>
-        </div>
-        <div class="game">
-            <a href="https://thepasswordgame.pages.dev" target="_blank" rel="noopener">
-                <img loading="lazy" src="https://thepasswordgame.pages.dev/images/icons/icon-192x192.png" alt="The Password Game">
-            </a>
-        </div>
-        <div class="game">
-            <a href="https://jelly-truck.pages.dev" target="_blank">
-                <img loading="lazy" src="https://jelly-truck.pages.dev/assets/img/truck2_icon.png" alt="Jelly Truck">
-            </a>
-        </div>
-        <div class="game">
-            <a href="https://bitlife-online.com/" target="_blank" rel="noopener">
-                <img loading="lazy" src="https://bitlife-online.pages.dev/icons/icon-192x192.png" alt="BitLife Online">
-            </a>
-        </div>
-        <div class="game">
-            <a href="https://flipacoin.org.uk/" target="_blank">
-                <img loading="lazy" src="https://coinflipgame.pages.dev/images/icons/icon-192x192.png" alt="Flip a Coin">
-            </a>
-        </div>
-        <div class="game">
-            <a href="https://spendmoneyelonmusk.com/" target="_blank" rel="noopener">
-                <img loading="lazy" src="https://spendmoney.pages.dev/icons/icon-192x192.jpg" alt="Spend Money Elon Musk">
-            </a>
-        </div>
-        <div class="game">
-            <a href="https://infinite-craft.life/" target="_blank" rel="noopener">
-                <img loading="lazy" src="https://infinite-craft.pages.dev/icons/icon-192x192.png" alt="Infinite Craft">
-            </a>
-        </div>
-        <div class="game">
-            <a href="https://immaculate-grid.com/" target="_blank">
-                <img loading="lazy" src="https://immaculategrid.pages.dev/icons/icon-192x192.png" alt="Immaculate Grid">
-            </a>
-        </div>
-        <div class="game">
-            <a href="https://heardle-game.com/" target="_blank" rel="noopener">
-                <img loading="lazy" src="https://heardle-game.pages.dev/icons/icon-192x192.png" alt="Heardle Game">
-            </a>
-        </div>
-        <div class="game">
-            <a href="https://jelly-truck.com/" target="_blank" rel="noopener">
-                <img loading="lazy" src="https://jellytruckgame.pages.dev/icons/icon-192x192.png" alt="Jelly Truck">
-            </a>
-        </div>
-        <div class="game">
-            <a href="https://slither-io.online/" target="_blank" rel="noopener">
-                <img loading="lazy" src="https://slither-io.pages.dev/icons/icon-192x192.png" alt="Slither IO">
-            </a>
-        </div>
-        <div class="game">
-            <a href="https://slitherio-online.com/" target="_blank" rel="noopener">
-                <img loading="lazy" src="https://slitherio.pages.dev/icons/icon-192x192.png" alt="SlitherIO Online">
-            </a>
-        </div>
-        <div class="game">
-            <a href="https://2048cupcakes.co.uk/" target="_blank" rel="noopener">
-                <img loading="lazy" src="https://2048-cupcakes.pages.dev/style/img/icon-192x192.png" alt="2048 Cupcakes">
-            </a>
-        </div>
-        <div class="game">
-            <a href="https://2048taylorswift.pages.dev/" target="_blank" rel="noopener">
-                <img loading="lazy" src="https://2048taylorswift.pages.dev/img/icon-192x192.png" alt="2048 Taylor Swift">
-            </a>
-        </div>
-        <div class="game">
-            <a href="https://2048doge.pages.dev/" target="_blank" rel="noopener">
-                <img loading="lazy" src="https://2048doge.pages.dev/img/icon-192x192.png" alt="2048 Doge">
-            </a>
-        </div>
+<meta charset="utf-8" />
+<title>IO Games | Play Online by Kaloo Dinaz</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Discover IO Games, where fun meets creativity! Explore a world of engaging & educational games designed to inspire young minds. Perfect for kids & families, io games offers interactive experiences that combine learning with play" />
+<meta property="og:title" content="io Games | Kaloo Dinaz">
+<meta property="og:description" content="Dive into the exciting universe of io games! Challenge players worldwide in these fast-paced, browser-based multiplayer games. Play for free & dominate the leaderboard!">    
+<meta property="og:locale" content="en-US">
+<meta name="robots" content="index, follow" />
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://kaloodinaz.github.io/">
+<meta property="og:site_name" content="io Games | Kaloo Dinaz">
+<meta property="og:width" content="1000">
+<meta property="og:height" content="630">
+<meta property="og:image" content="https://kaloodinaz.github.io/icons/kaloodinaz.jpg">
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="io Games | Kaloo Dinaz" />
+<meta name="twitter:description" content="Explore the thrilling world of io games, the addictive multiplayer games you can play instantly! From strategy to action-packed battles, discover the best free io games online & dive into non-stop fun" />
+<meta name="twitter:image" content="https://kaloodinaz.github.io/icons/kaloodinaz.jpg">  
+<link rel="shortcut icon" href="https://kaloodinaz.github.io/icons/icon-72x72.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://kaloodinaz.github.io/icons/icon-192x192.png">
+<link rel="manifest" href="https://kaloodinaz.github.io/manifest.json">
+<link rel="canonical" href="https://kaloodinaz.github.io/" />
+<meta name="msapplication-TileColor" content="#00aba9">
+<meta name="theme-color" content="#232323" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css" integrity="sha512-rt/SrQ4UNIaGfDyEXZtNcyWvQeOq0QLygHluFQcSjaGB04IxWhal71tKuzP6K8eYXYB6vJV4pHkXcmFGGQ1/0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+@import "https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800,900,1000,1100,1200&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Livvic:wght@400;500;600;700&display=swap";
+.spcb_text,p{line-height:1.6}
+.bg-half,.row>*,.section,.share_s{position:relative}
+@media (min-width:1400px) {
+.container{max-width:96%!important}
+}
+.h1,.h2,h1,h2{font-size:34px!important}
+.h3,.h5,h3,h5{font-size:20px!important}
+.h4,h4{font-size:24px!important}
+.h6,h6{font-size:16px!important}
+.text-primary{color:#fa8072!important}
+a.text-primary:focus,a.text-primary:hover{color:#284bc1!important}
+.text-muted{color:#8492a6!important}
+a.text-muted:focus,a.text-muted:hover{color:#75859b!important}
+.text-light{color:#f8f9fc!important}
+a{-webkit-transition:.1s;transition:.1s;text-decoration:none!important;color:#b41c67}
+.d-flex .flex-1{-webkit-box-flex:1;-ms-flex:1;flex:1}
+body{font-family:Nunito,sans-serif;overflow-x:hidden!important;font-size:16px;color:#161c2d;margin:0;background-color:#fffdfc}
+.h1,.h2,.h3,.h4,.h5,.h6,h1,h2,h3,h4,h5,h6{font-family:Nunito,sans-serif;font-weight:600}
+::-moz-selection{background:rgba(47,85,212,.9);color:#fff}
+::selection{background:rgba(47,85,212,.9);color:#fff}
+.section{padding:100px 0}
+.para-desc{max-width:600px}
+.spcb_text{font-size:18px;align-self:center}
+.bg-half{padding:32px 0;background-size:cover;-ms-flex-item-align:center;-ms-grid-row-align:center;align-self:center;background-position:center center}
+@media (max-width:768px) {
+.section{padding:60px 0}
+.bg-half{padding:50px 0}
+}
+.spcb-h1,spcb-h1{font-size:38px!important;font-weight:900!important;margin-top:35px}
+@media (max-width:767px) {
+.spcb-h1{font-size:34px!important}
+}
+.spcb-h2{font-size:20px!important;font-weight:700}
+.spcb_head{font-size:24px!important;font-weight:900!important}
+@media (max-width:1024px) {
+.spcb_head{font-size:22px!important;font-weight:900!important}
+}
+@media (max-width:512px) {
+.spcb_head{font-size:20px!important;font-weight:900!important}
+}
+.number{font-size:38px!important;font-weight:700!important}
+.logo_img{height:16px}
+@media (max-width:400px) {
+.logo_img{height:12px}
+}
+.share_s{padding:30px 0}
+.footer-bar{margin-top:30px;margin-bottom:30px}
+.no-padding{padding:0!important;width:100%!important}
+.banner{display:block}
+.banner_middle{width:728px;height:90px}
+.banner_under_mobile{display:none}
+@media (max-width:600px) {
+.banner_under{display:none}
+.banner_under_mobile{display:grid}
+}
+.Game-keyboard-button:hover{background-color:#faebd7}
+.light{background-color:#fff}
+.flag{width:20px;vertical-align:middle;margin-right:6px;float:left}
+.frames_block{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;justify-content:center}
+.wordle_but{display:block;margin:12px;width:calc(25% - 24px);text-align:center;padding:12px 20px;font-size:14px;font-weight:600;border-radius:8px;color:#3c4858!important;background-color:#d3dcf5;transition:.2s ease-in-out}
+.wordle_but:hover{box-shadow:-2px -2px 6px rgba(255,255,255,.6),-2px -2px 4px rgba(255,255,255,.4),2px 2px 2px rgba(255,255,255,.05),2px 2px 4px rgba(0,0,0,.1)}
+.wordle_step{display:flex;margin-top:1.4rem}
+.faq_block{border-radius:14px;margin-top:35px;padding:32px;background-color:#e6e6e6}
+.wordle_h3{padding-bottom:10px;margin-top:0;font-weight:700;text-align:left}
+.wordle_text{text-align:left;font-size:18px}
+.g_block{background-color:#fff;text-align:left;font-family:Nunito,sans-serif!important;min-height:600px}
+.nerdle_but{min-width:max-content;padding:18px 20px;font-size:16px;font-weight:700;background-color:#acff87!important;border:1px solid;color:#000!important}
+.dordle_but,.gen_but,.kid_but,.lewd_but,.octordle_but,.quordle_but,.tour_but{min-width:max-content;padding:18px 20px;border:1px solid #000;font-size:16px;font-weight:700;color:#000!important}
+.nerdle_but:hover{background-color:#8dd46d!important}
+.dordle_but{background-color:#d5d0ff!important}
+.dordle_but:hover{background-color:#a6a0d7!important}
+.quordle_but{background-color:#ffc487!important}
+.quordle_but:hover{background-color:#e9af73!important}
+.octordle_but{background-color:#ffcab3!important}
+.octordle_but:hover{background-color:#ffae8b!important}
+.kid_but{background-color:#f9dcff!important}
+.kid_but:hover{background-color:#f4bfff!important}
+.lewd_but{background-color:#fff5c6!important}
+.lewd_but:hover{background-color:#ffefa2!important}
+.gen_but{background-color:#d1efff!important}
+.gen_but:hover{background-color:#b0e3ff!important}
+.tour_but{background-color:#d8fdff!important}
+.tour_but:hover{background-color:#bcfcff!important}
+.plusle_but{background-color:#5adca3!important;color:#000!important;border:none;border-radius:6px}
+.plusle_but:hover{background-color:#52c090!important}
+.row__field:focus{outline:0}
+body.dark .faq_block{color:#000}
+body.dark .share_s{background-color:#212121}
+body.dark .wordle_but{box-shadow:none}
+.logo_text{color:#191919!important}
+.dark .logo_text{color:#d9d9d9!important}
+.quordle_b{background-color:#b6ebfe!important;color:#000!important;border:1px solid;border-radius:6px}
+.quordle_b:hover{background-color:#94e3ff!important}
+.frames_block{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;max-width:1000px;margin:auto}
+@media (max-width:991px) {
+.frames_block{margin-left:3px;margin-right:3px}
+}
+.we_but{display:inline-flex;min-height:90px;max-height:90px;align-items:center;margin:12px;width:calc(25% - 24px);text-align:center;padding:2px 13px;font-size:14px;font-weight:600;border-radius:8px;color:#3c4858!important;background-color:#cadaff!important;transition:transform .2s}
+@media (max-width:1024px) {
+.we_but{font-size:11px}
+}
+@media (max-width:710px) {
+.we_but,.wordle_but{width:calc(50% - 24px);font-size:12px;margin-top:5px}
+}
+.we_but:hover{transform:translate(0,-3px)}
+.wemage{width:38px;margin-right:10px}
+.we_d{margin:auto}
+.stats-chart table .number{font-size:16px!important}
+.games{display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;justify-content:center;margin-top:0}
+.game-item{width:200px;margin:15px;background:#fff;box-shadow:0 5px 20px #000;transition:transform .2s}
+.game-item:hover{transform:translate(0,-3px)}
+.btn,.game-item{text-decoration:none;border-radius:10px}
+.game-item__img{height:133px;border-radius:10px 10px 0 0}
+.game-item__img,.page,.scroll-element .scroll-element_outer,svg:not(:root){overflow:hidden}
+.game-item__img img{display:block;max-width:100%;transition:transform .35s;transform:scale(1)}
+img{border-style:none}
+.game-item__info{padding:10px 15px 15px}
+.btn-center,.game-item__info,.headline,.wordle-text .h2--center,.wordle-text p.center{text-align:center}
+.game-item__title{color:#13141c;font-size:20px;font-weight:700;margin-bottom:5px;transition:.3s}
+.game-item__text{color:#7e8399;font-size:13px;line-height:18px;margin-bottom:10px}
+.ad__container{padding-top:30px}
+header{display:block;padding:0!important}
+.header_menu{display:flex;justify-content:center}
+.darkmode--activated header{background-color:#13141c}
+.header_menu_link{color:#13141c;text-decoration:none;text-align:center}
+.darkmode--activated .header_menu_link.active{background:#66f099}
+.header_menu_link.active:hover{background:#00cb4b!important}
+.darkmode--activated .header_menu_link.active:hover{background:#17f067!important}
+.header_menu_link:hover{background:#17f067}
+.header_menu_link img{height:19px;margin-right:6px}
+.header_menu_link{background:#fff;color:#13141c;font-size:14px;line-height:14px;margin:3px;padding:6px 15px;border-radius:7px}
+.header_menu_link.active{background:#d6e7ed;color:#000;font-size:14px;font-weight:700}
+@media (max-width:991px) {
+.gamb span,header{position:relative}
+header{z-index:100;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
+}
+@media (max-width:767px) {
+.header_menu{justify-content:center!important;margin:auto}
+}
+.ezmob-footer-close{font-family:Nunito,'Open Sans',sans-serif!important;line-height:22px!important;color:#fff!important;background:#b0b0c1!important;width:24px!important;border:none!important}
+.mode-button.active{background-color:#00ac4a!important;transition:.2s ease-in-out}
+.mode-button{background-color:#dde1ed00!important;transition:.2s ease-in-out}
+.mode-button:hover{background-color:#04cf5c!important;transition:.2s ease-in-out}
+@media (max-width:768px) {
+.header_menu_link img{display:table;margin:auto}
+}
+.game-buttons{display:flex;justify-content:center;gap:20px;flex-wrap:wrap}
+.app-item{display:block;width:300px;text-align:center;text-decoration:none;color:#000;background-color:#fff;border:1px solid #ddd;border-radius:10px;overflow:hidden;box-shadow:0 4px 6px rgba(0,0,0,.1);transition:transform .2s,box-shadow .2s}
+.app-item:hover{transform:translateY(-5px);box-shadow:0 8px 12px rgba(0,0,0,.2)}
+.app-item img{width:100%;height:auto;display:block}
+.app-item .title{padding:10px 0;font-size:20px;font-weight:700;background-color:#f8f8f8;border-top:1px solid #ddd}
+.facebook-button,.twitter-button,.whatsapp-button{padding:10px 20px;border-radius:5px;margin:5px;cursor:pointer;transition:background-color .3s ease;font-family:'Work Sans',sans-serif;font-size:16px;font-weight:700}
+.facebook-button{background-color:#3b5998;color:#fff}
+.twitter-button{background-color:#00aced;color:#fff}
+.whatsapp-button{background-color:#25d366;color:#fff}
+.facebook-button:hover,.twitter-button:hover,.whatsapp-button:hover{background-color:rgba(0,0,0,0.6)}
+.share-button{padding:10px 20px;border-radius:5px;margin:5px;cursor:pointer;transition:background-color .3s ease;font-family:'Work Sans',sans-serif;font-size:16px;font-weight:700;background-color:#bb281d;color:#fff}
+.share-button:hover{background-color:#f9483b}
+#shareResult,#shareResultMobile{text-align:center}
+</style>    
+    	<script type="application/ld+json">
+        { 
+        "@context": "https://schema.org",
+        "@graph": [{ 
+           "@type":"Organization",
+           "@id": "https://kaloodinaz.github.io/#organization",
+           "name": "Kaloo Dinaz Games",
+           "url": "https://kaloodinaz.github.io/",
+           "sameAs": []},
         
-    </div>
-    <footer>
-        <p>&copy; 2024 Game Catalog by Kaloo Dinaz</p>
-        <div class="container">
-            <div class="row">
-                <div class="menu-footer-bar">
-                    <a class="link" href="/privacy.html">Privacy Policy</a>
-                    <a class="link" href="/termofuse.html">Term of use</a>
-                    <a class="link" href="mailto:support@kaloodinaz.github.io">Contact</a>
-                </div>
-            </div>
-        </div>
-    </footer>
+        { 
+        "@type": "WebSite",
+           "@id": "https://kaloodinaz.github.io/#website",
+           "url": "https://kaloodinaz.github.io/",
+           "name": "Kaloo Dinaz Games",
+           "publisher": { 
+           "@id":"https://kaloodinaz.github.io/#organization" } },        
+           
+        { 
+        "@type": "WebPage",
+           "@id":"https://kaloodinaz.github.io/#webpage",
+           "url": "https://kaloodinaz.github.io/",
+           "inLanguage": "en-US",
+           "name": "io Games - Kaloo Dinaz Games",
+           "isPartOf": { "@id":"https://kaloodinaz.github.io/#website" },
+           "image": { "@type":"ImageObject",
+           "@id": "https://kaloodinaz.github.io/wordle-games#primaryimage",
+           "url": "https://kaloodinaz.github.io/icons/kaloodinaz.jpg",
+           "width": 1000,"height":630 },
+           "primaryImageOfPage": { "@id":"https://kaloodinaz.github.io/#primaryimage" },
+           "datePublished": "2024-02-12T12:10:00-19:00",
+           "description": "Unleash your competitive spirit with IO games—action-packed multiplayer browser games perfect for quick fun or hours of entertainment. Join the global craze with top games like Agar.io, Slither.io, and more!" }] 
+        }
+        </script>    
+        
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "brand": "https://kaloodinaz.github.io/",
+            "name": "io Games - Kaloo Dinaz List",
+            "description": "Looking for Wordle game variations? We have compiled for you the most complete list of spinoffs of the popular word game Wordle so that you do not get bored.",
+            "category": "Productivity",
+            "image": "https://kaloodinaz.github.io/icons/kaloodinaz.jpg",
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "worstRating": "1",
+                "bestRating": "5",
+                "ratingValue": "4.8",
+                "ratingCount": "160"
+            }
+            }
+        </script>  
+        
+</head>
+
+<body>
+<script>
+if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/sw.js')
+.then(registration => {console.log('Service Worker registered successfully:', registration);})
+.catch(error => {console.log('Error in Service Worker registration:', error);});});}
+</script>
+<header class="header" style="margin:0;border-bottom:1px solid;justify-content:center;border-color:#d5d5d5; max-height:110px">
+<div class="header_menu">
+<a class="header_menu_link active" href="https://iogamesio.com/">
+<img loading="lazy" src="https://iogamesio.com/wp-content/uploads/2024/02/icon-96x96.png">io Games
+</a>
+<a class="header_menu_link active" href="https://kaloodinaz.github.io/2048-online/" target="_blank">
+<img loading="lazy" src="https://kaloodinaz.github.io/2048-online/icons/icon-72x72.png?v=1">2048 game
+</a>        
+<a class="header_menu_link active" href="https://suikagamejp.com/en/" target="_blank">
+<img loading="lazy" src="https://suikagamejp.com/icons/icon-72x72.png?v=3">Suika Game
+</a>
+<a class="header_menu_link active" href="https://nealfun-unblocked.com/" target="_blank">
+<img loading="lazy" src="https://nealfun-unblocked.com/icons/icon-72x72.png?v=1">Neal Fun
+</a>
+
+</div>
+</header>         
+<section class="bg-half">
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-lg-8 col-md-8 text-center">
+<div>
+<h1 class="spcb-h1">io Games List</h1>
+<h2 class="spcb-h2 text-muted">Explore the exciting world of IO games, a collection of fast-paced multiplayer browser games where players compete globally. Dive into popular titles like 2048, Slitherio, and wordle, and discover your next favorite game.</h2>                            
+</div>
+</div>
+</div>
+</div> 
+</section>         
+
+<section class="mt-4" style="margin-bottom:44px">
+<div class="row justify-content-center">
+<div class="col-lg-8">
+<div class="frames_block">
+
+<a class="we_but" href="https://2048cupcakes.co.uk/" target="_blank" rel="noopener">
+<img loading="lazy" src="https://2048cupcakes.co.uk/style/img/icon-192x192.png" alt="2048 Cupcakes game" class="wemage">
+<div class="we_d">
+<b>2048 cupcakes</b>
+</div>
+</a>
+
+<a class="we_but" href="https://2048taylorswift.pages.dev/" target="_blank" rel="noopener">
+<img loading="lazy" src="https://2048taylorswift.pages.dev/img/icon-192x192.png" alt="2048 Taylor Swift game" class="wemage">
+<div class="we_d">
+<b>2048 Taylor Swift</b>
+</div>
+</a>
+
+<a class="we_but" href="https://2048doge.pages.dev/" target="_blank" rel="noopener">
+<img loading="lazy" src="https://2048doge.pages.dev/img/icon-192x192.png" alt="2048 Doge game" class="wemage">
+<div class="we_d">
+<b>2048 Doge</b>
+</div>
+</a>
+
+<a class="we_but" href="https://spendmoneyelonmusk.com/game/2048-elon-musk/" target="_blank" rel="noopener">
+<img loading="lazy" src="https://spendmoneyelonmusk.com/game/2048-elon-musk/css/img/8.jpg" alt="2048 Elon Musk" class="wemage">
+<div class="we_d">
+<b>2048 Elon Musk</b>
+</div>
+</a>
+
+<a class="we_but" href="https://spendmoneyelonmusk.com/game/" target="_blank" rel="noopener">
+<img loading="lazy" src="https://spendmoneyelonmusk.com/icons/icon-192x192.jpg" alt="Spend Money Elon Musk" class="wemage">
+<div class="we_d">
+<b>Spend Elon Musk Money</b>
+</div>
+</a>
+
+<a class="we_but" href="https://spendmoneyelonmusk.com/game/billie-eilish/" target="_blank" rel="noopener">
+<img loading="lazy" src="https://i.imgur.com/jXlXGoJ.png" alt="Spend Billie Eilish Money game" class="wemage">
+<div class="we_d">
+<b>Spend Billie Eilish Money</b>
+</div>
+</a>
+
+<a class="we_but" href="https://spendmoneyelonmusk.com/game/mark-zuckerberg/" target="_blank" rel="noopener">
+<img loading="lazy" src="https://i.imgur.com/PxuFvrA.jpeg" alt="Spend Mark Zuckerberg Money game" class="wemage">
+<div class="we_d">
+<b>Spend Mark Zuckerberg Money</b>
+</div>
+</a>
+
+<a class="we_but" href="https://spendmoneyelonmusk.com/game/jeff-bezos/" target="_blank" rel="noopener">
+<img loading="lazy" src="https://i.imgur.com/F0uMMxW.jpeg" alt="Spend Jeff Bezos Money game" class="wemage">
+<div class="we_d">
+<b>Spend Jeff Bezos Money</b>
+</div>
+</a>
+
+<a class="we_but" href="https://spendmoneyelonmusk.com/game/mrbeast/" target="_blank" rel="noopener">
+<img loading="lazy" src="https://img.money.com/2022/12/mrbeast.jpg?quality=85" alt="Spend MrBeast Money game" class="wemage">
+<div class="we_d">
+<b>Spend MrBeast Money</b>
+</div>
+</a>
+
+<a class="we_but" href="https://spendmoneyelonmusk.com/game/steve-jobs/" target="_blank" rel="noopener">
+<img loading="lazy" src="https://i.imgur.com/v4AIW.jpeg" alt="Spend Steve Jobs Money game" class="wemage">
+<div class="we_d">
+<b>Spend Steve Jobs Money</b>
+</div>
+</a>
+
+<a class="we_but" href="https://spendmoneyelonmusk.com/game/cristiano-ronaldo/" target="_blank" rel="noopener">
+<img loading="lazy" src="https://i.imgur.com/me0GUwD.jpeg" alt="Spend Cristiano Ronaldo Money game" class="wemage">
+<div class="we_d">
+<b>Spend Cristiano Ronaldo Money</b>
+</div>
+</a>
+
+<a class="we_but" href="https://spendmoneyelonmusk.com/game/spend-1-trillion-dollars/" target="_blank" rel="noopener">
+<img loading="lazy" src="https://spendmoneyelonmusk.com/img/elon-musk-game.jpg" alt="Spend 1 Trillion Dollars Game" class="wemage">
+<div class="we_d">
+<b>Spend 1 Trillion Dollars</b>
+</div>
+</a>
+
+<a class="we_but" href="https://flipacoin.org.uk/" target="_blank">
+<img loading="lazy" src="https://flipacoin.org.uk/images/icons/icon-192x192.png" alt="Flip a Coin" class="wemage">
+<div class="we_d">
+<b>Flip a Coin</b>
+</div>
+</a>
+
+<a class="we_but" href="https://watermelongame.pages.dev/" target="_blank" rel="noopener">
+<img loading="lazy" src="https://watermelongame.pages.dev/maskable_icon_x192.png" alt="Watermelon Game" class="wemage">
+<div class="we_d">
+<b>Watermelon Game</b>
+</div>
+</a>
+
+<a class="we_but" href="https://coreballgame.pages.dev/" target="_blank" rel="noopener">
+<img loading="lazy" src="https://coreballgame.pages.dev/icons/icon-192x192.png" alt="Core Ball Game" class="wemage">
+<div class="we_d">
+<b>Core Ball</b>
+</div>
+</a>
+
+<a class="we_but" href="https://macaroni-art.pages.dev/" target="_blank" rel="noopener">
+<img loading="lazy" src="https://macaroni-art.pages.dev/icons/icon-192x192.png" alt="Macaroni Draw neal fun" class="wemage">
+<div class="we_d">
+<b>Macaroni Draw</b>
+</div>
+</a>
+
+<a class="we_but" href="https://thepasswordgame.pages.dev/" target="_blank" rel="noopener">
+<img loading="lazy" src="https://thepasswordgame.pages.dev/images/icons/icon-192x192.png" alt="The Password Game" class="wemage">
+<div class="we_d">
+<b>The Password Game</b>
+</div>
+</a>
+
+<a class="we_but" href="https://jelly-truck.pages.dev/" target="_blank">
+<img loading="lazy" src="https://jelly-truck.pages.dev/assets/img/truck2_icon.png" alt="Jelly Truck" class="wemage">
+<div class="we_d">
+<b>Jelly Truck</b>
+</div>
+</a>
+
+<a class="we_but" href="https://bitlife-online.com/" target="_blank" rel="noopener">
+<img loading="lazy" src="https://bitlife-online.com/icons/icon-192x192.png" alt="BitLife Online" class="wemage">
+<div class="we_d">
+<b>BitLife Online</b>
+</div>
+</a>
+
+<a class="we_but" href="https://infinite-craft.life/" target="_blank" rel="noopener">
+<img loading="lazy" src="https://infinite-craft.life/icons/icon-192x192.png" alt="Infinite Craft" class="wemage">
+<div class="we_d">
+<b>Infinite Craft</b>
+</div>
+</a>
+
+<a class="we_but" href="https://immaculate-grid.com/" target="_blank">
+<img loading="lazy" src="https://immaculate-grid.com/icons/icon-192x192.png" alt="Immaculate Grid" class="wemage">
+<div class="we_d">
+<b>Immaculate Grid</b>
+</div>
+</a>
+
+<a class="we_but" href="https://heardle-game.com/" target="_blank" rel="noopener">
+<img loading="lazy" src="https://heardle-game.com/icons/icon-192x192.png" alt="Heardle Game" class="wemage">
+<div class="we_d">
+<b>Heardle Game</b>
+</div>
+</a>
+
+<a class="we_but" href="https://jelly-truck.com/" target="_blank" rel="noopener">
+<img loading="lazy" src="https://jelly-truck.com/icons/icon-192x192.png" alt="Jelly Truck" class="wemage">
+<div class="we_d">
+<b>Jelly Truck</b>
+</div>
+</a>
+
+<a class="we_but" href="https://slither-io.online/" target="_blank" rel="noopener">
+<img loading="lazy" src="https://slither-io.online/icons/icon-192x192.png" alt="Slither IO" class="wemage">
+<div class="we_d">
+<b>Slither IO</b>
+</div>
+</a>
+
+<a class="we_but" href="https://slitherio-online.com/" target="_blank" rel="noopener">
+<img loading="lazy" src="https://slitherio-online.com/icons/icon-192x192.png" alt="SlitherIO Online" class="wemage">
+<div class="we_d">
+<b>Slitherio Online</b>
+</div>
+</a>
+
+<a class="we_but" href="https://cupcake2048.org/" target="_blank" rel="noopener">
+<img loading="lazy" src="https://cupcake2048.org/css/img/icon-192x192.png" alt="cupcake 2048" class="wemage">
+<div class="we_d">
+<b>Cupcake 2048</b>
+</div>
+</a>
+
+<a class="we_but" href="https://kaloodinaz.github.io/wordle-unlimited/" target="_blank" rel="noopener">
+<img loading="lazy" src="https://kaloodinaz.github.io/wordle-unlimited/icons/icon-72x72.png?v=3" alt="Wordle Unlimited game" class="wemage">
+<div class="we_d">
+<b>Wordle Unlimited</b>
+</div>
+</a>
+
+<a class="we_but" href="https://ricepurity.pages.dev/" target="_blank" rel="noopener">
+<img loading="lazy" src="https://ricepurity.pages.dev/apple-touch-icon.png" alt="Rice Purity Test" class="wemage">
+<div class="we_d">
+<b>Rice Purity Test</b>
+</div>
+</a>
+
+<a class="we_but" href="https://lifechecklist.pages.dev/" target="_blank" rel="noopener">
+<img loading="lazy" src="https://lifechecklist.pages.dev/favicon.png" alt="lifechecklist neal fun" class="wemage">
+<div class="we_d">
+<b>Life Checklist</b>
+</div>
+</a>
+
+<a class="we_but" href="https://progress-nealfun.pages.dev/" target="_blank" rel="noopener">
+<img loading="lazy" src="https://progress-nealfun.pages.dev/favicon.png" alt="Progress neal fun" class="wemage">
+<div class="we_d">
+<b>Progress by Neal Fun</b>
+</div>
+</a>
+
+</div></div></div>  
+</section>
+        
+<section>
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-lg-8 text-center">
+
+<div id="shareResult" class="center">
+<div class="facebook-button" onclick="shareFacebook()">Share on Facebook</div>
+<div class="twitter-button" onclick="shareTwitter()">Share on Twitter</div>
+<div class="whatsapp-button" onclick="shareWhatsApp()">Share on WhatsApp</div>
+</div>
+<div id="shareResultMobile" class="center">
+<div id="shareButton" class="share-button" onclick="share()">Share / Copy link</div>
+</div>
+
+</div>
+</div>
+</div> 
+</section>
+
+<section class="bg-half" id="what-are-io-games">
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-lg-8 col-md-8 text-center">
+<div>
+<h2>What Are io Games?</h2>
+<p>io games are free-to-play multiplayer browser games that gained popularity for their simple mechanics and competitive gameplay. These games are hosted on websites with a <code>.io</code> domain, originally inspired by the British Indian Ocean Territory domain but now synonymous with this genre.</p>
+</div></div></div></div> 
+</section>
+
+<section class="bg-half" id="how-to-play">
+    <div class="container">
+        <div class="row">
+        <div class="col-lg-8 col-md-8">
+        <div>
+    <h2>How to Play io Games</h2>
+    <p>Playing io games is simple. Follow these steps:</p>
+    <ol>
+        <li>Choose a game from a trusted io game website.</li>
+        <li>Customize your character or nickname if the game allows.</li>
+        <li>Understand the controls, typically using your mouse and keyboard.</li>
+        <li>Compete with other players online and aim to top the leaderboard.</li>
+    </ol>
+</div></div></div></div> 
+</section>
+
+<section class="bg-half" id="why-play">
+    <div class="container">
+        <div class="row">
+        <div class="col-lg-8 col-md-8">
+        <div>
+    <h2>Why Play io Games?</h2>
+    <p>io games offer several advantages:</p>
+    <ul>
+        <li><strong>Accessibility:</strong> Play directly in your browser without downloads.</li>
+        <li><strong>Free-to-Play:</strong> Enjoy countless games without spending a dime.</li>
+        <li><strong>Multiplayer Fun:</strong> Compete with players worldwide in real-time.</li>
+        <li><strong>Short Sessions:</strong> Perfect for quick gaming breaks.</li>
+        <li><strong>Variety:</strong> Explore a wide range of genres, from shooters to strategy games.</li>
+    </ul>
+</div></div></div></div> 
+</section>
+
+        
+<footer class="footer mb-4 mt-4" style="font-weight:900;font-size:17px;justify-content:center">
+<div class="container text-center" style="display:contents">
+<div>
+© <span id="currentYear"></span> io Games list by <a href="https://kaloodinaz.github.io/">Kaloo Dinaz</a>
+</div>
+<div class="list-unstyled mt-3">
+<li class="list-inline-item"><a href="/termofuse.html">Terms of Use</a></li>
+<li class="list-inline-item"> | </li>
+<li class="list-inline-item"><a href="/privacy.html">Privacy Policy</a></li>
+<li class="list-inline-item"> | </li>
+<li class="list-inline-item"><a href="mailto:support@kaloodinaz.github.io">Contact Us</a></li>
+</div></div></div></div>
+
+</footer>
+
+<script>
+  function shareFacebook() {
+    const url = window.location.href;
+    const title = document.title;
+    const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}&quote=${encodeURIComponent(title)}`;
+    window.open(facebookShareUrl, "_blank");
+}
+
+function shareTwitter() {
+    const url = window.location.href;
+    const title = document.title;
+    const twitterShareUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(title)}`;
+    window.open(twitterShareUrl, "_blank");
+}
+
+function shareWhatsApp() {
+    const url = window.location.href;
+    const title = document.title;
+    const whatsappShareUrl = `whatsapp://send?text=${encodeURIComponent(title + " " + url)}`;
+    window.open(whatsappShareUrl);
+}
+
+function share() {
+    const url = window.location.href;
+    const title = document.title;
+
+    if (navigator.share) {
+        navigator.share({
+            title: title,
+            text: title,
+            url: url
+        }).then(() => {
+            console.log('Successfully shared');
+        }).catch((error) => {
+            console.error('Mistakes when sharing on social media:', error);
+        });
+    } else {
+        const textarea = document.createElement('textarea');
+        textarea.value = title + "\n" + url;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+
+        const shareButton = document.getElementById('shareButton');
+        shareButton.textContent = 'Copied!';
+        setTimeout(function() {
+            shareButton.textContent = 'Share / Copy link';
+        }, 2000);
+        console.log('Copied link');
+    }
+}
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
-
