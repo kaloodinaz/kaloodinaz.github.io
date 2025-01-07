@@ -183,12 +183,13 @@ header{z-index:100;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex
 .app-item .title{padding:10px 0;font-size:20px;font-weight:700;background-color:#f8f8f8;border-top:1px solid #ddd}
 .facebook-button,.twitter-button,.whatsapp-button{padding:10px 20px;border-radius:5px;margin:5px;cursor:pointer;transition:background-color .3s ease;font-family:'Work Sans',sans-serif;font-size:16px;font-weight:700}
 .facebook-button{background-color:#3b5998;color:#fff}
-.twitter-button{background-color:#00aced;color:#fff}
-.whatsapp-button{background-color:#25d366;color:#fff}
+.twitter-button{background-color:#252525;color:#fff}
+.whatsapp-button{background-color:#247F47;color:#fff}
 .facebook-button:hover,.twitter-button:hover,.whatsapp-button:hover{background-color:rgba(0,0,0,0.6)}
 .share-button{padding:10px 20px;border-radius:5px;margin:5px;cursor:pointer;transition:background-color .3s ease;font-family:'Work Sans',sans-serif;font-size:16px;font-weight:700;background-color:#bb281d;color:#fff}
 .share-button:hover{background-color:#f9483b}
 #shareResult,#shareResultMobile{text-align:center}
+.kaloo a {color:#0066cc;text-decoration:none;font-weight:bold}
 </style>    
     	<script type="application/ld+json">
         { 
@@ -507,7 +508,7 @@ if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigat
 
 <div id="shareResult" class="center">
 <div class="facebook-button" onclick="shareFacebook()">Share on Facebook</div>
-<div class="twitter-button" onclick="shareTwitter()">Share on Twitter</div>
+<div class="twitter-button" onclick="shareTwitter()">Share on X</div>
 <div class="whatsapp-button" onclick="shareWhatsApp()">Share on WhatsApp</div>
 </div>
 <div id="shareResultMobile" class="center">
@@ -565,17 +566,19 @@ if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigat
         
 <footer class="footer mb-4 mt-4" style="font-weight:900;font-size:17px;justify-content:center">
 <div class="container text-center" style="display:contents">
-<div>
+<div class="kaloo">
 © <span id="currentYear"></span> io Games list by <a href="https://kaloodinaz.github.io/">Kaloo Dinaz</a>
 </div>
-<div class="list-unstyled mt-3">
-<li class="list-inline-item"><a href="/termofuse.html">Terms of Use</a></li>
-<li class="list-inline-item"> | </li>
-<li class="list-inline-item"><a href="/privacy.html">Privacy Policy</a></li>
-<li class="list-inline-item"> | </li>
-<li class="list-inline-item"><a href="mailto:support@kaloodinaz.github.io">Contact Us</a></li>
-</div></div></div></div>
 
+<ul class="list-unstyled mt-3 list-inline">
+  <li class="list-inline-item"><a href="/termofuse.html">Terms of Use</a></li>
+  <li class="list-inline-item"> | </li>
+  <li class="list-inline-item"><a href="/privacy.html">Privacy Policy</a></li>
+  <li class="list-inline-item"> | </li>
+  <li class="list-inline-item"><a href="mailto:support@kaloodinaz.github.io">Contact Us</a></li>
+</ul>
+
+</div></div></div>
 </footer>
 
 <script>
