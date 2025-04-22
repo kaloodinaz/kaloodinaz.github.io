@@ -327,6 +327,11 @@
         <priority>0.8</priority>
     </url>
       <url>
+        <loc>https://kaloodinaz.github.io/16384/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+      <url>
         <loc>https://kaloodinaz.github.io/2048dbz/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
