@@ -361,5 +361,10 @@
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
+          <url>
+        <loc>https://kaloodinaz.github.io/coreball-jp/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
 
 </urlset>
