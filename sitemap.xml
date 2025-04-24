@@ -366,5 +366,10 @@
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
+          <url>
+        <loc>https://kaloodinaz.github.io/2048-one-piece/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
 
 </urlset>
