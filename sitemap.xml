@@ -381,5 +381,25 @@
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
+          <url>
+        <loc>https://kaloodinaz.github.io/dinosaurgame/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+              <url>
+        <loc>https://kaloodinaz.github.io/dinosaurgame/dino3d/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+              <url>
+        <loc>https://kaloodinaz.github.io/dinosaurgame/naruto/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+              <url>
+        <loc>https://kaloodinaz.github.io/dinosaurgame/corona/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
 
 </urlset>
