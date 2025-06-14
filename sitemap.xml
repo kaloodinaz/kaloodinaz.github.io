@@ -460,5 +460,10 @@
         <loc>https://kaloodinaz.github.io/minesweeper-online/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
-</url>      
+</url>
+<url>
+        <loc>https://kaloodinaz.github.io/crosswordle/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+</url>
 </urlset>
