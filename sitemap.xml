@@ -400,7 +400,7 @@
         <loc>https://kaloodinaz.github.io/dinosaurgame/corona/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
-    </url>
+</url>
 <url>
         <loc>https://kaloodinaz.github.io/taylor2048/</loc>
         <changefreq>monthly</changefreq>
@@ -437,6 +437,11 @@
         <priority>0.8</priority>
 </url>
 <url>
+        <loc>https://kaloodinaz.github.io/minesweeper-google/game.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+</url>
+<url>
         <loc>https://kaloodinaz.github.io/sudoku/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
@@ -468,6 +473,16 @@
 </url>
 <url>
         <loc>https://kaloodinaz.github.io/worldle-unlimited/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+</url>
+<url>
+        <loc>https://kaloodinaz.github.io/cookie-clicker/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+</url>
+<url>
+        <loc>https://kaloodinaz.github.io/cookie-clicker/game.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
 </url>
