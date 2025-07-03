@@ -496,4 +496,14 @@
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
 </url>
+<url>
+        <loc>https://kaloodinaz.github.io/bubble-shooter/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+</url>
+<url>
+        <loc>https://kaloodinaz.github.io/bubble-shooter/bubble-shooter-pro.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+</url>
 </urlset>
