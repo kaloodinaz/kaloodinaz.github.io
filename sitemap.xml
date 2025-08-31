@@ -551,4 +551,34 @@
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
 </url>
+<url>
+        <loc>https://kaloodinaz.github.io/doodlecricket/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+</url>
+<url>
+        <loc>https://kaloodinaz.github.io/doodlebaseball/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+</url>
+<url>
+        <loc>https://kaloodinaz.github.io/snakegame/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+</url>
+<url>
+        <loc>https://kaloodinaz.github.io/snakemods/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+</url>
+<url>
+        <loc>https://kaloodinaz.github.io/doodlesolitaire/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+</url>
+<url>
+        <loc>https://kaloodinaz.github.io/doodlejump/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+</url>
 </urlset>
