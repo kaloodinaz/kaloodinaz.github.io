@@ -581,4 +581,14 @@
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
 </url>
+<url>
+        <loc>https://kaloodinaz.github.io/quickdraw/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+</url>
+<url>
+        <loc>https://kaloodinaz.github.io/doodle-basketball/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+</url>
 </urlset>
