@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTML Sitemap - Kaloo Dinaz</title>
+
+<meta name="description" content="Automatically generated HTML sitemap of Kaloo Dinaz’s site including all games, tools, and pages. Stay organized and explore the full collection.">
+<meta name="keywords" content="HTML sitemap, Kaloo Dinaz, 2048 games, Neal fun, online games, wordle games, suika game, free browser games">
+<meta property="og:title" content="HTML Sitemap - Kaloo Dinaz">
+<meta property="og:description" content="Explore all pages and games on Kaloo Dinaz’s website with this auto-generated sitemap.">
+<meta property="og:url" content="https://kaloodinaz.github.io/sitemap.html">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+<style>
+  body {
+    font-family: "Roboto", Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #222;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+  }
+  h1 {
+    text-align: center;
+    color: #007B55;
+    margin-bottom: 20px;
+    font-size: 2rem;
+  }
+  .sitemap-container {
+    max-width: 900px;
+    margin: auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 20px;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  li {
+    margin: 8px 0;
+    border-bottom: 1px solid #eaeaea;
+    padding-bottom: 5px;
+  }
+  a {
+    color: #0066cc;
+    text-decoration: none;
+    word-break: break-word;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  .loading {
+    text-align: center;
+    color: #666;
+    margin: 20px 0;
+  }
+  @media (max-width: 600px) {
+    body {
+      padding: 10px;
+    }
+    .sitemap-container {
+      padding: 15px;
+    }
+    h1 {
+      font-size: 1.6rem;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="sitemap-container">
+    <h1>HTML Sitemap</h1>
+    <p>This page automatically lists all pages, tools, and games from <strong>kaloodinaz.github.io</strong>.</p>
+    <div id="sitemap-content">
+      <p class="loading">Loading sitemap...</p>
+    </div>
+  </div>
+
+<script>
+async function loadSitemap() {
+  try {
+    const response = await fetch('sitemap.xml');
+    if (!response.ok) throw new Error('Unable to load sitemap.xml');
+    const xmlText = await response.text();
+    const parser = new DOMParser();
+    const xmlDoc = parser.parseFromString(xmlText, "application/xml");
+    const urls = xmlDoc.getElementsByTagName("loc");
+
+    let html = '<ul>';
+    for (let i = 0; i < urls.length; i++) {
+      const url = urls[i].textContent;
+      html += `<li><a href="${url}" target="_blank" rel="noopener">${url}</a></li>`;
+    }
+    html += '</ul>';
+
+    document.getElementById('sitemap-content').innerHTML = html;
+  } catch (error) {
+    document.getElementById('sitemap-content').innerHTML =
+      '<p style="color:red;text-align:center;">Error loading sitemap.xml</p>';
+  }
+}
+
+loadSitemap();
+</script>
+</body>
+</html>
