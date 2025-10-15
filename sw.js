@@ -1,8 +1,6 @@
 const CACHE_NAME = 'cache-v2';
 const urlsToCache = [
   '/index.html',
-  '/robots.txt',
-  '/manifest.json',
   '/privacy.html',
   '/termofuse.html',
   '/index.js',
