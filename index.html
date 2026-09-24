@@ -2,8 +2,10 @@
 <html lang="en" prefix="og: https://ogp.me/ns#">
 <head>
 <meta charset="utf-8" />
-<title>Kaloo Dinaz Games - io Games List | Play Online</title>
+<link rel="manifest" href="https://kaloodinaz.github.io/manifest.json">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="canonical" href="https://kaloodinaz.github.io/" />
+<title>Kaloo Dinaz Games - io Games List | Play Online</title>
 <meta name="description" content="Browse the Kaloo Dinaz io games list: 2048 remixes, Wordle spinoffs, .io multiplayer battles and more free browser games. No downloads, no sign-up, just click and play." />
 <meta property="og:title" content="io Games List | Kaloo Dinaz">
 <meta property="og:description" content="A hand-picked collection of free .io and browser games - 2048 remixes, Wordle spinoffs, arcade classics and multiplayer battles you can play instantly.">
@@ -22,21 +24,17 @@
 <link rel="shortcut icon" href="https://kaloodinaz.github.io/favicon.ico">
 <link rel="icon" href="https://kaloodinaz.github.io/icons/icon-72x72.png">
 <link rel="apple-touch-icon" sizes="192x192" href="https://kaloodinaz.github.io/icons/icon-192x192.png">
-<link rel="manifest" href="https://kaloodinaz.github.io/manifest.json">
-<link rel="canonical" href="https://kaloodinaz.github.io/" />
 <meta name="msapplication-TileColor" content="#00aba9">
 <meta name="theme-color" content="#161c2d" />
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap">
 </noscript>
-
 <style>
-:root{--bg:#fbfaf9;--bg-alt:#f2f1fb;--card:#fff;--text:#080d1b;--muted:#151c29;--primary:#5b4dff;--primary-dark:#3f34d8;--accent:#fa8072;--border:#e7e6f5;--copy:#080914;--shadow:0 10px 30px #1e145a14;--radius:16px}
-html[data-theme="dark"]{--bg:#0f1120;--bg-alt:#171a2e;--card:#1b1e33;--text:#eef0fb;--muted:#a2a8c4;--primary:#8f7bff;--primary-dark:#7466e8;--accent:#ff9d8f;--border:#2b2f4a;--shadow:0 10px 30px #00000073}
+:root{--bg:#fbfaf9;--bg-alt:#f2f1fb;--card:#fff;--text:#080d1b;--muted:#171c27;--primary:#5b4dff;--primary-dark:#3f34d8;--accent:#85170a;--border:#e7e6f5;--copy:#03051f;--shadow:0 10px 30px #1e145a14;--radius:16px}
+html[data-theme="dark"]{--bg:#0f1120;--bg-alt:#171a2e;--card:#1b1e33;--text:#eef0fb;--muted:#d0d9ff;--primary:#8f7bff;--primary-dark:#7466e8;--accent:#d6331c;--border:#2b2f4a;--copy:#3f51b5;--shadow:0 10px 30px #00000073}
 *,::before,::after{box-sizing:border-box}
 html{scroll-behavior:smooth}
 ::-webkit-scrollbar{width:8px;height:8px}
@@ -55,31 +53,69 @@ p{line-height:1.7;color:var(--muted);margin:0 0 1em}
 .eyebrow{color:var(--primary);font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:13px}
 .lede{max-width:680px;margin:0 auto 1em}
 .site-header{background:var(--card);border-bottom:1px solid var(--border)}
-.header-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 20px;flex-wrap:wrap}
-.brand{font-weight:800;font-size:20px;color:var(--text)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 20px;flex-wrap:wrap;position:relative}
+.brand{font-weight:800;font-size:20px;color:var(--text);flex-shrink:0}
 .brand span{color:var(--primary)}
-nav.main-menu{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+nav.main-menu{display:flex;flex-wrap:wrap;align-items:center;gap:8px;justify-content:center;flex:1;position:relative;padding-right:46px}
 .main-menu a{display:flex;align-items:center;gap:6px;background:var(--bg-alt);color:var(--text);font-size:13px;font-weight:600;padding:7px 12px;border-radius:20px;border:1px solid var(--border)}
 .main-menu a:hover{background:var(--primary);color:#fff;border-color:var(--primary)}
 .main-menu img{height:16px;width:16px;border-radius:4px;aspect-ratio:1/1;object-fit:cover}
-.theme-toggle{border:1px solid var(--border);background:var(--bg-alt);color:var(--text);border-radius:20px;padding:7px 14px;font-weight:700;font-size:13px;cursor:pointer;display:flex;align-items:center;gap:6px}
+.theme-toggle{border:1px solid var(--border);background:var(--bg-alt);color:var(--text);border-radius:50%;width:36px;height:36px;padding:0;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;position:absolute;right:0;top:50%;transform:translateY(-50%)}
 .theme-toggle:hover{border-color:var(--primary)}
+.theme-toggle svg{width:18px;height:18px;stroke:currentColor;fill:none;flex-shrink:0}
+.theme-toggle .icon-sun{display:none}
+html[data-theme="dark"] .theme-toggle .icon-moon{display:none}
+html[data-theme="dark"] .theme-toggle .icon-sun{display:block}
+.theme-toggle .tt-label{display:none}
+.menu-toggle{display:none;border:1px solid var(--border);background:var(--bg-alt);border-radius:8px;width:36px;height:36px;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;margin-left:auto}
+.menu-toggle svg{width:18px;height:18px;stroke:var(--text);fill:none}
 .hero{padding:70px 0 40px;text-align:center;background:radial-gradient(circle at 50% 0%,var(--bg-alt),var(--bg) 70%)}
 .hero h1{font-size:clamp(28px,5vw,46px)}
 .hero p{max-width:680px;margin:0 auto;font-size:18px}
-.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-top:32px}
-.feature-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:26px 22px;box-shadow:var(--shadow)}
-.feature-card .ic{font-size:28px;margin-bottom:10px}
-.feature-card h3{font-size:17px;margin-bottom:6px}
+.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-top:32px;align-items:stretch}
+.feature-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:26px 22px;box-shadow:var(--shadow);display:flex;flex-direction:column}
+.feature-card .ic{font-size:28px;text-align:center;margin-bottom:10px}
+.feature-card h3{font-size:17px;text-align:center;margin-bottom:6px}
 .feature-card p{font-size:14px;margin:0}
-.games-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:16px;margin-top:10px}
-.we_but{display:flex!important;flex-direction:column;align-items:center;justify-content:center;gap:8px;width:auto!important;margin:0!important;text-align:center;padding:18px 10px!important;font-size:13px!important;font-weight:700;border-radius:14px!important;color:var(--text)!important;background:var(--card)!important;border:1px solid var(--border);box-shadow:var(--shadow);transition:transform .18s ease,border-color .18s ease;min-height:118px}
+.games-toolbar{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:12px;margin:24px 0 8px}
+.games-search{width:100%;max-width:420px;position:relative}
+.games-search input{width:100%;padding:12px 40px;border-radius:24px;border:1px solid var(--border);background:var(--card);color:var(--text);font-family:'Outfit',sans-serif;font-size:14px}
+.games-search input:focus{outline:2px solid var(--primary)}
+.games-search svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);width:16px;height:16px;stroke:var(--muted);fill:none;pointer-events:none}
+.games-search-clear{position:absolute;right:8px;top:50%;transform:translateY(-50%);width:26px;height:26px;border:none;background:var(--bg-alt);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0}
+.games-search-clear svg{position:static;transform:none;width:12px;height:12px;stroke:var(--muted)}
+.games-search-clear:hover svg{stroke:var(--primary)}
+.games-search-clear[hidden]{display:none}
+.games-filter-group{display:flex;gap:6px;background:var(--bg-alt);border:1px solid var(--border);border-radius:24px;padding:4px}
+.games-filter-btn{border:none;background:transparent;color:var(--muted);font-family:'Outfit',sans-serif;font-weight:700;font-size:13px;padding:8px 14px;border-radius:20px;cursor:pointer;display:inline-flex;align-items:center;gap:6px;transition:.15s}
+.games-filter-btn svg{width:14px;height:14px;stroke:currentColor;fill:none}
+.games-filter-btn.is-active{background:var(--primary-dark);color:#fff}
+.games-filter-btn:not(.is-active):hover{color:var(--text)}
+.games-random-btn{border:none;background:var(--accent);color:#fff;font-family:'Outfit',sans-serif;font-weight:700;font-size:13px;padding:10px 16px;border-radius:24px;cursor:pointer;display:inline-flex;align-items:center;gap:8px;transition:transform .15s ease,box-shadow .15s ease}
+.games-random-btn svg{width:16px;height:16px;stroke:#fff;fill:none}
+.games-random-btn:hover{transform:translateY(-2px);box-shadow:0 8px 18px #140a3c2e}
+.we_but{position:relative}
+.fav-btn{position:absolute;top:8px;right:8px;width:28px;height:28px;border:none;background:var(--card);border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:2}
+.fav-btn svg{width:14px;height:14px;stroke:var(--muted);fill:none;transition:.15s}
+.fav-btn:hover svg{stroke:var(--accent)}
+.fav-btn.is-fav svg{stroke:var(--accent);fill:var(--accent)}
+.fav-count-badge{display:none}
+.we_but.is-hidden{display:none!important}
+.we_but.is-flash{animation:games-flash 1.1s ease}
+@keyframes games-flash {
+0%{box-shadow:0 0 0 0 #5b4dff8c}
+60%{box-shadow:0 0 0 10px #5b4dff00}
+100%{box-shadow:0 0 0 0 #5b4dff00}
+}
+.games-count{text-align:center;font-size:13px;color:var(--muted);margin-bottom:18px}
+.games-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:16px;margin-top:10px}
+.we_but{display:flex!important;flex-direction:column;align-items:center;justify-content:center;gap:10px;width:auto!important;margin:0!important;text-align:center;padding:20px 12px!important;font-size:13px!important;font-weight:700;border-radius:14px!important;color:var(--text)!important;background:var(--card)!important;border:1px solid var(--border);box-shadow:var(--shadow);transition:transform .18s ease,border-color .18s ease;min-height:150px}
 .we_but:hover{transform:translateY(-4px);border-color:var(--primary)}
-.wemage{width:44px!important;height:44px!important;aspect-ratio:1/1;border-radius:10px!important;margin:0!important;object-fit:cover;background:var(--bg-alt)}
+.wemage{width:70px!important;height:70px!important;aspect-ratio:1/1;border-radius:14px!important;margin:0!important;object-fit:cover;background:var(--bg-alt)}
 .we_d{margin:0!important;min-height:34px;display:flex;align-items:center;justify-content:center}
 .no-results{grid-column:1/-1;text-align:center;color:var(--muted);padding:30px 0;display:none}
-.steps-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-top:32px}
-.step-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:24px 20px;box-shadow:var(--shadow)}
+.steps-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-top:32px;align-items:stretch}
+.step-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:24px 20px;box-shadow:var(--shadow);display:flex;flex-direction:column}
 .step-num{width:34px;height:34px;border-radius:50%;background:var(--primary);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;margin-bottom:10px}
 .step-card h3{font-size:16px;margin-bottom:6px}
 .step-card p{font-size:14px;margin:0}
@@ -92,26 +128,72 @@ nav.main-menu{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
 .faq-item p{margin-top:10px;font-size:14px}
 .share_s{padding:20px 0 70px}
 .share-buttons{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:20px}
-.share-btn{display:flex;border:none;border-radius:10px;padding:12px 18px;font-family:'Outfit',sans-serif;font-weight:700;font-size:14px;color:#fff;cursor:pointer;align-items:center;justify-content:center;gap:5px;transition:filter .15s}
-.share-btn:hover{filter:brightness(1.1)}
+.share-btn{border:none;border-radius:10px;padding:12px 18px;font-family:'Outfit',sans-serif;font-weight:700;font-size:14px;color:#fff;cursor:pointer;transition:transform .15s ease,box-shadow .15s ease,background-color .15s ease;display:inline-flex;align-items:center;gap:8px}
+.share-btn svg{width:17px;height:17px;fill:currentColor;flex-shrink:0}
+.share-btn:hover{transform:translateY(-3px);box-shadow:0 8px 18px #140a3c2e}
+.share-btn:active{transform:translateY(-1px)}
 .share-x{background:#000}
+.share-x:hover{background:#262626}
 .share-whatsapp{background:#084f23}
+.share-whatsapp:hover{background:#1fb457}
 .share-reddit{background:#791d00}
+.share-reddit:hover{background:#e03d00}
 .share-facebook{background:#032149}
+.share-facebook:hover{background:#1465d1}
 .share-telegram{background:#044665}
+.share-telegram:hover{background:#1c85b8}
 .share-copy{background:var(--copy)}
+.share-copy:hover{background:var(--primary-dark)}
 .site-footer{padding:40px 0;border-top:1px solid var(--border);background:var(--bg-alt)}
 .kaloo{font-weight:800;font-size:15px;margin-bottom:12px}
 .footer-links{list-style:none;display:flex;gap:14px;justify-content:center;flex-wrap:wrap;padding:0;margin:0 0 16px;font-size:13px}
 .footer-links a{color:var(--muted);font-weight:600}
 .footer-links a:hover{color:var(--primary)}
 .disclaimer{max-width:640px;margin:0 auto;font-size:12px;color:var(--muted)}
+@media (max-width:860px) {
+.menu-toggle{display:flex}
+nav.main-menu{display:none;position:absolute;top:100%;left:0;right:0;background:var(--card);border:1px solid var(--border);border-top:none;flex-direction:column;align-items:stretch;padding:12px;gap:8px;box-shadow:var(--shadow);z-index:40}
+nav.main-menu.open{display:flex}
+.main-menu a{justify-content:flex-start}
+.header-inner{justify-content:space-between}
+.theme-toggle{position:static;order:99;width:100%;height:auto;border-radius:10px;justify-content:flex-start;gap:10px;padding:9px 12px;margin-left:0;transform:none}
+.theme-toggle .tt-label{display:inline;font-size:13px;font-weight:600}
+}
+@media (max-width:768px) {
+.hero{padding:50px 0 32px}
+.games-grid{grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}
+.wemage{width:60px!important;height:60px!important}
+}
 @media (max-width:600px) {
-.header-inner{justify-content:center;text-align:center}
-.section{padding:44px 0}
-.games-grid{grid-template-columns:repeat(auto-fill,minmax(120px,1fr))}
+.section{padding:40px 0}
+.games-grid{grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:12px}
+.wemage{width:52px!important;height:52px!important}
+.we_but{min-height:120px;padding:14px 8px!important}
+.features-grid,.steps-grid{grid-template-columns:1fr}
+.share-buttons{gap:8px}
+.share-btn{padding:10px 14px;font-size:13px}
+.games-toolbar{flex-direction:column;align-items:stretch}
+.games-search{max-width:100%}
+.games-filter-group{justify-content:center}
+.games-random-btn{justify-content:center}
+.fav-btn{width:26px;height:26px}
+}
+@media (max-width:400px) {
+.brand{font-size:17px}
+.hero h1{font-size:26px}
+.games-grid{grid-template-columns:repeat(auto-fill,minmax(110px,1fr))}
+.wemage{width:46px!important;height:46px!important}
 }
 </style>
+
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":"ItemList",
+"name":"io Games List",
+"itemListElement":{"@context": "https://schema.org", "@type": "ItemList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "2048 cupcakes", "url": "https://2048cupcakes.co.uk/"}, {"@type": "ListItem", "position": 2, "name": "2048 Taylor Swift", "url": "https://2048taylorswift.co.uk/"}, {"@type": "ListItem", "position": 3, "name": "2048 Doge", "url": "https://kaloodinaz.github.io/doge2048/"}, {"@type": "ListItem", "position": 4, "name": "2048 Flappy", "url": "https://kaloodinaz.github.io/2048-flappy/"}, {"@type": "ListItem", "position": 5, "name": "2048 Elon Musk", "url": "https://spendmoneyelonmusk.com/game/2048-elon-musk/"}, {"@type": "ListItem", "position": 6, "name": "Spend Elon Musk Money", "url": "https://spendmoneyelonmusk.com/game/"}, {"@type": "ListItem", "position": 7, "name": "Spend Billie Eilish Money", "url": "https://spendmoneyelonmusk.com/game/billie-eilish/"}, {"@type": "ListItem", "position": 8, "name": "Spend Mark Zuckerberg Money", "url": "https://spendmoneyelonmusk.com/game/mark-zuckerberg/"}, {"@type": "ListItem", "position": 9, "name": "Spend Jeff Bezos Money", "url": "https://spendmoneyelonmusk.com/game/jeff-bezos/"}, {"@type": "ListItem", "position": 10, "name": "Spend MrBeast Money", "url": "https://spendmoneyelonmusk.com/game/mrbeast/"}, {"@type": "ListItem", "position": 11, "name": "Spend Steve Jobs Money", "url": "https://spendmoneyelonmusk.com/game/steve-jobs/"}, {"@type": "ListItem", "position": 12, "name": "Spend Cristiano Ronaldo Money", "url": "https://spendmoneyelonmusk.com/game/cristiano-ronaldo/"}, {"@type": "ListItem", "position": 13, "name": "Spend 1 Trillion Dollars", "url": "https://spendmoneyelonmusk.com/game/spend-1-trillion-dollars/"}, {"@type": "ListItem", "position": 14, "name": "Flip a Coin", "url": "https://flipacoin.org.uk/"}, {"@type": "ListItem", "position": 15, "name": "Watermelon Game", "url": "https://watermelongame.pages.dev/"}, {"@type": "ListItem", "position": 16, "name": "Core Ball", "url": "https://coreballgame.pages.dev/"}, {"@type": "ListItem", "position": 17, "name": "Macaroni Draw", "url": "https://macaroni-art.pages.dev/"}, {"@type": "ListItem", "position": 18, "name": "Pizza Draw", "url": "https://pizzadraw.pages.dev/"}, {"@type": "ListItem", "position": 19, "name": "The Password Game", "url": "https://thepasswordgame.pages.dev/"}, {"@type": "ListItem", "position": 20, "name": "Jelly Truck", "url": "https://jelly-truck.pages.dev/"}, {"@type": "ListItem", "position": 21, "name": "BitLife Online", "url": "https://bitlife-online.pages.dev/"}, {"@type": "ListItem", "position": 22, "name": "Infinite Craft", "url": "https://infinite-craft.pages.dev/"}, {"@type": "ListItem", "position": 23, "name": "Immaculate Grid", "url": "https://immaculategrid.pages.dev/"}, {"@type": "ListItem", "position": 24, "name": "Heardle Game", "url": "https://heardle-game.pages.dev/"}, {"@type": "ListItem", "position": 25, "name": "Jelly Truck", "url": "https://jellytruckgame.pages.dev/"}, {"@type": "ListItem", "position": 26, "name": "Slither IO", "url": "https://slither-io.pages.dev/"}, {"@type": "ListItem", "position": 27, "name": "Slitherio Online", "url": "https://slitherio-online.com/"}, {"@type": "ListItem", "position": 28, "name": "Cupcake 2048", "url": "https://cupcake2048.org/"}, {"@type": "ListItem", "position": 29, "name": "Wordle Game", "url": "https://kaloodinaz.github.io/wordle-unlimited/"}, {"@type": "ListItem", "position": 30, "name": "Wordle Unlimited", "url": "https://unlimited-wordle.org/"}, {"@type": "ListItem", "position": 31, "name": "Rice Purity Test", "url": "https://ricepurity.pages.dev/"}, {"@type": "ListItem", "position": 32, "name": "Life Checklist", "url": "https://lifechecklist.pages.dev/"}, {"@type": "ListItem", "position": 33, "name": "Progress by Neal Fun", "url": "https://progress-nealfun.pages.dev/"}, {"@type": "ListItem", "position": 34, "name": "Wordle Connections", "url": "https://wordle-connections.pages.dev/"}, {"@type": "ListItem", "position": 35, "name": "Google Snake", "url": "https://google-snake-game.pages.dev/"}, {"@type": "ListItem", "position": 36, "name": "Dinosaur Game", "url": "https://dinosaur-google.pages.dev/"}, {"@type": "ListItem", "position": 37, "name": "Sudoku Game", "url": "https://sudoku-online.pages.dev/"}, {"@type": "ListItem", "position": 38, "name": "Solitaire Online", "url": "https://solitaire-free-online.pages.dev/"}, {"@type": "ListItem", "position": 39, "name": "Spacebar Clicker", "url": "https://space-bar-clicker.pages.dev/"}, {"@type": "ListItem", "position": 40, "name": "Sprunki Game", "url": "https://sprunkin.pages.dev/"}, {"@type": "ListItem", "position": 41, "name": "Retro Bowl", "url": "https://unblocked-retrobowl.pages.dev/"}, {"@type": "ListItem", "position": 42, "name": "Mahjong Classic", "url": "https://mahjong-classic.pages.dev/"}, {"@type": "ListItem", "position": 43, "name": "Block Blast Game", "url": "https://blockblastgamefree.pages.dev/"}, {"@type": "ListItem", "position": 44, "name": "Google Block Breaker", "url": "https://blockbreakergame.pages.dev/"}, {"@type": "ListItem", "position": 45, "name": "Doodle Cricket", "url": "https://doodlecricket.pages.dev/"}, {"@type": "ListItem", "position": 46, "name": "Google Minesweeper", "url": "https://minesweeper-google.pages.dev/"}, {"@type": "ListItem", "position": 47, "name": "Minesweeper Online", "url": "https://minesweeper-online.pages.dev/"}, {"@type": "ListItem", "position": 48, "name": "Squaredle Game", "url": "https://squaredle.pages.dev/"}, {"@type": "ListItem", "position": 49, "name": "Slitherio Offline", "url": "https://slitherio-unblocked.pages.dev/"}, {"@type": "ListItem", "position": 50, "name": "Pacman Game", "url": "https://pacman-online.pages.dev/"}, {"@type": "ListItem", "position": 51, "name": "Squares Game", "url": "https://squaresgame.pages.dev/"}, {"@type": "ListItem", "position": 52, "name": "Doodle Baseball", "url": "https://doodlebaseball.pages.dev/"}, {"@type": "ListItem", "position": 53, "name": "Doodle Snake Mods", "url": "https://google-snake-mods.pages.dev/"}, {"@type": "ListItem", "position": 54, "name": "Flappy Bird 2", "url": "https://flappybird2.pages.dev/"}, {"@type": "ListItem", "position": 55, "name": "2048 game", "url": "https://2048game-hjd.pages.dev/"}, {"@type": "ListItem", "position": 56, "name": "Cookie Clicker", "url": "https://cookieclickergame.pages.dev/"}, {"@type": "ListItem", "position": 57, "name": "Dordlewordle", "url": "https://dordlewordle.pages.dev/"}, {"@type": "ListItem", "position": 58, "name": "Combinations", "url": "https://combinations.pages.dev/"}, {"@type": "ListItem", "position": 59, "name": "Strands nyt", "url": "https://strandsnyt.pages.dev/"}, {"@type": "ListItem", "position": 60, "name": "Quordle", "url": "https://quordlegame.pages.dev/"}, {"@type": "ListItem", "position": 61, "name": "Octordle wordle", "url": "https://octordlewordle.pages.dev/"}, {"@type": "ListItem", "position": 62, "name": "Sedecordle", "url": "https://sedecordle.pages.dev/"}, {"@type": "ListItem", "position": 63, "name": "Duotrigordle", "url": "https://duotrigordle.pages.dev/"}, {"@type": "ListItem", "position": 64, "name": "64 Wordle", "url": "https://64ordle.pages.dev/"}, {"@type": "ListItem", "position": 65, "name": "NYT Connections", "url": "https://nytconnections.pages.dev/"}, {"@type": "ListItem", "position": 66, "name": "Spelling Bee", "url": "https://nytspellingbee.pages.dev/"}, {"@type": "ListItem", "position": 67, "name": "Phrazle", "url": "https://phrazle.pages.dev/"}, {"@type": "ListItem", "position": 68, "name": "Word Search", "url": "https://wordsearchpuzzles.pages.dev/"}, {"@type": "ListItem", "position": 69, "name": "Crossword", "url": "https://crosswordpuzzles.pages.dev/"}, {"@type": "ListItem", "position": 70, "name": "Weaver", "url": "https://weavergame.pages.dev/"}, {"@type": "ListItem", "position": 71, "name": "Globle", "url": "https://globlegame.pages.dev/"}, {"@type": "ListItem", "position": 72, "name": "Worldle", "url": "https://worldle-game.pages.dev/"}, {"@type": "ListItem", "position": 73, "name": "Number Wordle", "url": "https://numberwordle.pages.dev/"}, {"@type": "ListItem", "position": 74, "name": "Tic-Tac-Toe", "url": "https://kaloodinaz.github.io/tic-tac-toe/"}, {"@type": "ListItem", "position": 75, "name": "Retro Ping Pong", "url": "https://tabletennisgame.pages.dev/"}, {"@type": "ListItem", "position": 76, "name": "Planet Clicker", "url": "https://planetclickergame.pages.dev/"}, {"@type": "ListItem", "position": 77, "name": "Click the Red Button", "url": "https://redbuttongame.pages.dev/"}, {"@type": "ListItem", "position": 78, "name": "Polka Dot 2", "url": "https://polkadotgame.pages.dev/"}, {"@type": "ListItem", "position": 79, "name": "Agario Unblocked", "url": "https://agario-unblocked.pages.dev/"}, {"@type": "ListItem", "position": 80, "name": "Snakeio unblocked", "url": "https://snakeio.pages.dev/"}, {"@type": "ListItem", "position": 81, "name": "Hole.io 2", "url": "https://hole-io-unblocked.pages.dev/"}, {"@type": "ListItem", "position": 82, "name": "Diep.io 2", "url": "https://diepio2.pages.dev/"}]}
+}
+</script>
 
 <script type="application/ld+json">
 {
@@ -165,13 +247,20 @@ if('serviceWorker' in navigator){window.addEventListener('load',()=>{navigator.s
 <header class="site-header">
 <div class="header-inner">
 <div class="brand">Kaloo <span>Dinaz</span></div>
-<nav class="main-menu" aria-label="Main menu">
-<a href="https://seraph-games.github.io/" target="_blank" rel="noopener"><img loading="lazy" src="https://seraph-games.github.io/icons/icon-192x192.png" alt="Seraph Games - fast-paced multiplayer browser games for global competition">Seraph Games</a>
-<a href="https://kaloodinaz.github.io/2048-online/" target="_blank" rel="noopener"><img loading="lazy" src="https://kaloodinaz.github.io/2048-online/icons/icon-72x72.png?v=1" alt="2048 game - a popular mathematical puzzle where players combine numbers to reach the 2048 tile">2048</a>
-<a href="https://suikagamejp.com/en/" target="_blank" rel="noopener"><img loading="lazy" src="https://suikagamejp.com/icons/icon-72x72.png?v=3" alt="Suika Game - a Japanese puzzle game where players merge fruits to create a giant watermelon">Suika Game</a>
-<a href="https://nealfun-unblocked.com/" target="_blank" rel="noopener"><img loading="lazy" src="https://nealfun-unblocked.com/icons/icon-72x72.png?v=1" alt="Neal Fun - a platform offering fun and creative interactive projects suitable for all ages">Neal Fun</a>
+<nav class="main-menu" id="mainMenu" aria-label="Main menu">
+<a href="https://seraph-games.github.io/" target="_blank" rel="noopener"><img loading="lazy" width="16" height="16" src="https://seraph-games.github.io/icons/icon-72x72.png" alt="Seraph Games - fast-paced multiplayer browser games for global competition">Seraph Games</a>
+<a href="https://kaloodinaz.github.io/2048-online/" target="_blank" rel="noopener"><img loading="lazy" width="16" height="16" src="https://kaloodinaz.github.io/2048-online/icons/icon-72x72.png?v=1" alt="2048 game - a popular mathematical puzzle where players combine numbers to reach the 2048 tile">2048</a>
+<a href="https://suikagamejp.com/en/" target="_blank" rel="noopener"><img loading="lazy" width="16" height="16" src="https://suikagamejp.com/icons/icon-72x72.png?v=3" alt="Suika Game - a Japanese puzzle game where players merge fruits to create a giant watermelon">Suika</a>
+<a href="https://nealfun-unblocked.com/" target="_blank" rel="noopener"><img loading="lazy" width="16" height="16" src="https://nealfun-unblocked.com/icons/icon-72x72.png?v=1" alt="Neal Fun - a platform offering fun and creative interactive projects suitable for all ages">NealFun</a>
+<button class="theme-toggle" id="themeToggle" type="button" aria-pressed="false" aria-label="Toggle dark mode">
+<svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z" stroke-width="2" stroke-linejoin="round"/></svg>
+<svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4" stroke-width="2"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" stroke-width="2" stroke-linecap="round"/></svg>
+<span class="tt-label">Dark Mode</span>
+</button>
 </nav>
-<button class="theme-toggle" id="themeToggle" type="button" aria-pressed="false">🌙 Dark mode</button>
+<button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mainMenu">
+<svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18" stroke-width="2" stroke-linecap="round"/></svg>
+</button>
 </div>
 </header>
 
@@ -187,527 +276,551 @@ if('serviceWorker' in navigator){window.addEventListener('load',()=>{navigator.s
 <div class="container">
 <p class="eyebrow text-center" style="display:block">The Collection</p>
 <h2 class="text-center">Play a Game</h2>
+<p class="lede text-center">Every card below opens a full game in a new tab - no login, no install, no waiting. Type a name to jump straight to a favorite, or just scroll and see what catches your eye.</p>
+<div class="games-toolbar">
+<div class="games-search">
+<svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7" stroke-width="2"/><path d="m20 20-3.5-3.5" stroke-width="2" stroke-linecap="round"/></svg>
+<input type="text" id="gameSearch" placeholder="Search games by name…" aria-label="Search games by name">
+<button type="button" class="games-search-clear" id="gameSearchClear" aria-label="Clear search" hidden>
+<svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" stroke-width="2" stroke-linecap="round"/></svg>
+</button>
+</div>
+<div class="games-filter-group" role="group" aria-label="Filter games">
+<button type="button" class="games-filter-btn is-active" id="filterAll">All Games</button>
+<button type="button" class="games-filter-btn" id="filterFavs">
+<svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg>
+Favorites <span id="favCount">(0)</span>
+</button>
+</div>
+<button type="button" class="games-random-btn" id="randomGameBtn">
+<svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4" stroke-width="2"/><circle cx="8.5" cy="8.5" r="1.5"/><circle cx="15.5" cy="8.5" r="1.5"/><circle cx="8.5" cy="15.5" r="1.5"/><circle cx="15.5" cy="15.5" r="1.5"/><circle cx="12" cy="12" r="1.5"/></svg>
+Surprise Me
+</button>
+</div>
+<p class="games-count" id="gamesCount"></p>
 <div class="games-grid">
+<p class="no-results" id="noResults">No games match your search. Try a different keyword.</p>
 
-<a class="we_but" href="https://2048cupcakes.co.uk/" target="_blank" rel="noopener">
-<img loading="lazy" src="https://2048cupcakes.co.uk/style/img/icon-192x192.png" alt="2048 Cupcakes game - a sweet-themed variation of the classic 2048 puzzle game" class="wemage">
+<a class="we_but" href="https://2048cupcakes.co.uk/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://2048cupcakes.co.uk/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+<img loading="lazy" width="70" height="70" src="https://2048cupcakes.co.uk/style/img/icon-72x72.png" alt="2048 Cupcakes game - a sweet-themed variation of the classic 2048 puzzle game" class="wemage">
+
 <div class="we_d">
 <b>2048 cupcakes</b>
 </div>
 </a>
 
-<a class="we_but" href="https://2048taylorswift.co.uk/" target="_blank" rel="noopener">
-<img loading="lazy" src="https://2048taylorswift.co.uk/style/img/icon-192x192.png" alt="2048 Taylor Swift game - a themed version of the 2048 game featuring Taylor Swift's albums" class="wemage">
+<a class="we_but" href="https://2048taylorswift.co.uk/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://2048taylorswift.co.uk/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+<img width="70" height="70" loading="lazy" src="https://2048taylorswift.co.uk/style/img/icon-192x192.png" alt="2048 Taylor Swift game - a themed version of the 2048 game featuring Taylor Swift's albums" class="wemage">
 <div class="we_d">
 <b>2048 Taylor Swift</b>
 </div>
 </a>
 
-<a class="we_but" href="https://kaloodinaz.github.io/doge2048/" target="_blank" rel="noopener">
-<img loading="lazy" src="https://kaloodinaz.github.io/doge2048/meta/apple-touch-icon.png" alt="2048 Doge game - a humorous 2048 game with Doge-themed tiles" class="wemage">
+<a class="we_but" href="https://kaloodinaz.github.io/doge2048/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://kaloodinaz.github.io/doge2048/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+<img width="70" height="70" loading="lazy" src="https://kaloodinaz.github.io/doge2048/meta/apple-touch-icon.png" alt="2048 Doge game - a humorous 2048 game with Doge-themed tiles" class="wemage">
 <div class="we_d">
 <b>2048 Doge</b>
 </div>
 </a>
 
-<a class="we_but" href="https://kaloodinaz.github.io/2048-flappy/" target="_blank" rel="noopener">
-<img loading="lazy" src="https://kaloodinaz.github.io/2048-flappy/apple-touch-icon.png" alt="2048 Flappy bird game" class="wemage">
+<a class="we_but" href="https://kaloodinaz.github.io/2048-flappy/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://kaloodinaz.github.io/2048-flappy/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+<img width="70" height="70" loading="lazy" src="https://kaloodinaz.github.io/2048-flappy/apple-touch-icon.png" alt="2048 Flappy bird game" class="wemage">
 <div class="we_d">
 <b>2048 Flappy</b>
 </div>
 </a>
 
-<a class="we_but" href="https://spendmoneyelonmusk.com/game/2048-elon-musk/" target="_blank" rel="noopener">
-<img loading="lazy" src="https://spendmoneyelonmusk.com/game/2048-elon-musk/css/img/8.jpg" alt="2048 Elon Musk game - a 2048 game inspired by Elon Musk's ventures and memes" class="wemage">
+<a class="we_but" href="https://spendmoneyelonmusk.com/game/2048-elon-musk/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://spendmoneyelonmusk.com/game/2048-elon-musk/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+<img width="70" height="70" loading="lazy" src="https://spendmoneyelonmusk.com/game/2048-elon-musk/css/img/8.jpg" alt="2048 Elon Musk game - a 2048 game inspired by Elon Musk's ventures and memes" class="wemage">
 <div class="we_d">
 <b>2048 Elon Musk</b>
 </div>
 </a>
 
-<a class="we_but" href="https://spendmoneyelonmusk.com/game/" target="_blank" rel="noopener">
-<img loading="lazy" src="https://spendmoneyelonmusk.com/icons/icon-192x192.png" alt="Spend Elon Musk Money - a game where players simulate spending Elon Musk's fortune" class="wemage">
+<a class="we_but" href="https://spendmoneyelonmusk.com/game/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://spendmoneyelonmusk.com/game/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+<img width="70" height="70" loading="lazy" src="https://spendmoneyelonmusk.com/icons/icon-72x72.png" alt="Spend Elon Musk Money - a game where players simulate spending Elon Musk's fortune" class="wemage">
 <div class="we_d">
 <b>Spend Elon Musk Money</b>
 </div>
 </a>
 
-<a class="we_but" href="https://spendmoneyelonmusk.com/game/billie-eilish/" target="_blank" rel="noopener">
-<img loading="lazy" src="https://spendmoneyelonmusk.com/img/billie-eilish.webp" alt="Spend Billie Eilish Money - a game to experience spending Billie Eilish's net worth creatively" class="wemage">
+<a class="we_but" href="https://spendmoneyelonmusk.com/game/billie-eilish/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://spendmoneyelonmusk.com/game/billie-eilish/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+<img width="70" height="70" loading="lazy" src="https://spendmoneyelonmusk.com/img/billie-eilish.webp" alt="Spend Billie Eilish Money - a game to experience spending Billie Eilish's net worth creatively" class="wemage">
 <div class="we_d">
 <b>Spend Billie Eilish Money</b>
 </div>
 </a>
 
-<a class="we_but" href="https://spendmoneyelonmusk.com/game/mark-zuckerberg/" target="_blank" rel="noopener">
-<img loading="lazy" src="https://spendmoneyelonmusk.com/img/mark-zuckerberg.webp" alt="Spend Mark Zuckerberg Money - a simulation game about spending Mark Zuckerberg's wealth" class="wemage">
+<a class="we_but" href="https://spendmoneyelonmusk.com/game/mark-zuckerberg/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://spendmoneyelonmusk.com/game/mark-zuckerberg/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+<img width="70" height="70" loading="lazy" src="https://spendmoneyelonmusk.com/img/mark-zuckerberg.webp" alt="Spend Mark Zuckerberg Money - a simulation game about spending Mark Zuckerberg's wealth" class="wemage">
 <div class="we_d">
 <b>Spend Mark Zuckerberg Money</b>
 </div>
 </a>
 
-<a class="we_but" href="https://spendmoneyelonmusk.com/game/jeff-bezos/" target="_blank" rel="noopener">
-<img loading="lazy" src="https://spendmoneyelonmusk.com/img/jeff-bezos.webp" alt="Spend Jeff Bezos Money - a playful game where players spend Jeff Bezos's fortune" class="wemage">
+<a class="we_but" href="https://spendmoneyelonmusk.com/game/jeff-bezos/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://spendmoneyelonmusk.com/game/jeff-bezos/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+<img width="70" height="70" loading="lazy" src="https://spendmoneyelonmusk.com/img/jeff-bezos.webp" alt="Spend Jeff Bezos Money - a playful game where players spend Jeff Bezos's fortune" class="wemage">
 <div class="we_d">
 <b>Spend Jeff Bezos Money</b>
 </div>
 </a>
 
-<a class="we_but" href="https://spendmoneyelonmusk.com/game/mrbeast/" target="_blank" rel="noopener">
-<img loading="lazy" src="https://spendmoneyelonmusk.com/img/mrbeast.webp" alt="Spend MrBeast Money - a game to simulate spending MrBeast's earnings" class="wemage">
+<a class="we_but" href="https://spendmoneyelonmusk.com/game/mrbeast/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://spendmoneyelonmusk.com/game/mrbeast/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+<img width="70" height="70" loading="lazy" src="https://spendmoneyelonmusk.com/img/mrbeast.webp" alt="Spend MrBeast Money - a game to simulate spending MrBeast's earnings" class="wemage">
 <div class="we_d">
 <b>Spend MrBeast Money</b>
 </div>
 </a>
 
-<a class="we_but" href="https://spendmoneyelonmusk.com/game/steve-jobs/" target="_blank" rel="noopener">
-<img loading="lazy" src="https://spendmoneyelonmusk.com/img/steve-jobs.webp" alt="Spend Steve Jobs Money - a game focused on spending the wealth of the Apple co-founder" class="wemage">
+<a class="we_but" href="https://spendmoneyelonmusk.com/game/steve-jobs/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://spendmoneyelonmusk.com/game/steve-jobs/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+<img width="70" height="70" loading="lazy" src="https://spendmoneyelonmusk.com/img/steve-jobs.webp" alt="Spend Steve Jobs Money - a game focused on spending the wealth of the Apple co-founder" class="wemage">
 <div class="we_d">
 <b>Spend Steve Jobs Money</b>
 </div>
 </a>
 
-<a class="we_but" href="https://spendmoneyelonmusk.com/game/cristiano-ronaldo/" target="_blank" rel="noopener">
-<img loading="lazy" src="https://spendmoneyelonmusk.com/img/cristiano-ronaldo.webp" alt="Spend Cristiano Ronaldo Money - a simulation game centered on spending Cristiano Ronaldo's earnings" class="wemage">
+<a class="we_but" href="https://spendmoneyelonmusk.com/game/cristiano-ronaldo/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://spendmoneyelonmusk.com/game/cristiano-ronaldo/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+<img width="70" height="70" loading="lazy" src="https://spendmoneyelonmusk.com/img/cristiano-ronaldo.webp" alt="Spend Cristiano Ronaldo Money - a simulation game centered on spending Cristiano Ronaldo's earnings" class="wemage">
 <div class="we_d">
 <b>Spend Cristiano Ronaldo Money</b>
 </div>
 </a>
 
-<a class="we_but" href="https://spendmoneyelonmusk.com/game/spend-1-trillion-dollars/" target="_blank" rel="noopener">
-<img loading="lazy" src="https://spendmoneyelonmusk.com/img/elon-musk-game.jpg" alt="Spend one Trillion Dollars - a challenging game to creatively spend 1 trillion dollars" class="wemage">
+<a class="we_but" href="https://spendmoneyelonmusk.com/game/spend-1-trillion-dollars/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://spendmoneyelonmusk.com/game/spend-1-trillion-dollars/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+<img width="70" height="70" loading="lazy" src="https://spendmoneyelonmusk.com/img/elon-musk-game.jpg" alt="Spend one Trillion Dollars - a challenging game to creatively spend 1 trillion dollars" class="wemage">
 <div class="we_d">
 <b>Spend 1 Trillion Dollars</b>
 </div>
 </a>
 
-<a class="we_but" href="https://flipacoin.org.uk/" target="_blank">
-<img loading="lazy" src="https://flipacoin.org.uk/images/icons/icon-192x192.png" alt="Flip a Coin - a simple tool to flip a virtual coin for making decisions" class="wemage">
+<a class="we_but" href="https://flipacoin.org.uk/" target="_blank"><button type="button" class="fav-btn" data-key="https://flipacoin.org.uk/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+<img width="70" height="70" loading="lazy" src="https://flipacoin.org.uk/images/icons/icon-72x72.png" alt="Flip a Coin - a simple tool to flip a virtual coin for making decisions" class="wemage">
 <div class="we_d">
 <b>Flip a Coin</b>
 </div>
 </a>
 
-<a class="we_but" href="https://watermelongame.pages.dev/" target="_blank" rel="noopener">
-<img loading="lazy" src="https://watermelongame.pages.dev/maskable_icon_x192.png" alt="Watermelon Game - a fun merging game inspired by Suika Game where players combine fruits" class="wemage">
+<a class="we_but" href="https://watermelongame.pages.dev/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://watermelongame.pages.dev/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+<img width="70" height="70" loading="lazy" src="https://watermelongame.pages.dev/maskable_icon_x192.png" alt="Watermelon Game - a fun merging game inspired by Suika Game where players combine fruits" class="wemage">
 <div class="we_d">
 <b>Watermelon Game</b>
 </div>
 </a>
 
-<a class="we_but" href="https://coreballgame.pages.dev/" target="_blank" rel="noopener">
-<img loading="lazy" src="https://coreballgame.pages.dev/icons/icon-192x192.png" alt="Core Ball - an addictive game where players aim to attach balls to a rotating core" class="wemage">
+<a class="we_but" href="https://coreballgame.pages.dev/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://coreballgame.pages.dev/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+<img width="70" height="70" loading="lazy" src="https://coreballgame.pages.dev/icons/icon-72x72.png" alt="Core Ball - an addictive game where players aim to attach balls to a rotating core" class="wemage">
 <div class="we_d">
 <b>Core Ball</b>
 </div>
 </a>
 
-<a class="we_but" href="https://macaroni-art.pages.dev/" target="_blank" rel="noopener">
-<img loading="lazy" src="https://macaroni-art.pages.dev/icons/icon-192x192.png" alt="Macaroni Draw - a creative drawing game inspired by Neal Fun's Macaroni Art" class="wemage">
+<a class="we_but" href="https://macaroni-art.pages.dev/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://macaroni-art.pages.dev/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+<img width="70" height="70" loading="lazy" src="https://macaroni-art.pages.dev/icons/icon-72x72.png" alt="Macaroni Draw - a creative drawing game inspired by Neal Fun's Macaroni Art" class="wemage">
 <div class="we_d">
 <b>Macaroni Draw</b>
 </div>
 </a>
 
-<a class="we_but" href="https://pizzadraw.pages.dev/" target="_blank" rel="noopener">
-<img loading="lazy" src="https://pizzadraw.pages.dev/icons/icon-192x192.png" alt="Pizza Draw Simulator" class="wemage">
+<a class="we_but" href="https://pizzadraw.pages.dev/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://pizzadraw.pages.dev/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+<img width="70" height="70" loading="lazy" src="https://pizzadraw.pages.dev/icons/icon-72x72.png" alt="Pizza Draw Simulator" class="wemage">
 <div class="we_d">
 <b>Pizza Draw</b>
 </div>
 </a>
 
-<a class="we_but" href="https://thepasswordgame.pages.dev/" target="_blank" rel="noopener">
-<img loading="lazy" src="https://thepasswordgame.pages.dev/images/icons/icon-192x192.png" alt="The Password Game - a humorous and challenging game about creating secure passwords" class="wemage">
+<a class="we_but" href="https://thepasswordgame.pages.dev/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://thepasswordgame.pages.dev/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+<img width="70" height="70" loading="lazy" src="https://thepasswordgame.pages.dev/images/icons/icon-72x72.png" alt="The Password Game - a humorous and challenging game about creating secure passwords" class="wemage">
 <div class="we_d">
 <b>The Password Game</b>
 </div>
 </a>
 
-<a class="we_but" href="https://jelly-truck.pages.dev/" target="_blank">
-<img loading="lazy" src="https://jelly-truck.pages.dev/icons/icon-192x192.png" alt="Jelly Truck - a quirky driving game featuring a jelly-like truck" class="wemage">
+<a class="we_but" href="https://jelly-truck.pages.dev/" target="_blank"><button type="button" class="fav-btn" data-key="https://jelly-truck.pages.dev/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+<img width="70" height="70" loading="lazy" src="https://jelly-truck.pages.dev/icons/icon-72x72.png" alt="Jelly Truck - a quirky driving game featuring a jelly-like truck" class="wemage">
 <div class="we_d">
-<b>Jelly Truck</b>
+<b>Jelly Truck 2</b>
 </div>
 </a>
 
-<a class="we_but" href="https://bitlife-online.pages.dev/" target="_blank" rel="noopener">
-<img loading="lazy" src="https://bitlife-online.pages.dev/icons/icon-192x192.png" alt="BitLife Online - a life simulator game where players make life choices and see the outcomes" class="wemage">
+<a class="we_but" href="https://bitlife-online.pages.dev/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://bitlife-online.pages.dev/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+<img width="70" height="70" loading="lazy" src="https://bitlife-online.pages.dev/icons/icon-72x72.png" alt="BitLife Online - a life simulator game where players make life choices and see the outcomes" class="wemage">
 <div class="we_d">
 <b>BitLife Online</b>
 </div>
 </a>
 
-<a class="we_but" href="https://infinite-craft.pages.dev/" target="_blank" rel="noopener">
-<img loading="lazy" src="https://infinite-craft.pages.dev/icons/icon-192x192.png" alt="Infinite Craft - a creative crafting and building game in an infinite world" class="wemage">
+<a class="we_but" href="https://infinite-craft.pages.dev/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://infinite-craft.pages.dev/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+<img width="70" height="70" loading="lazy" src="https://infinite-craft.pages.dev/icons/icon-72x72.png" alt="Infinite Craft - a creative crafting and building game in an infinite world" class="wemage">
 <div class="we_d">
 <b>Infinite Craft</b>
 </div>
 </a>
 
-<a class="we_but" href="https://immaculategrid.pages.dev/" target="_blank">
-<img loading="lazy" src="https://immaculategrid.pages.dev/icons/icon-192x192.png" alt="Immaculate Grid - a unique trivia game where players test their sports knowledge" class="wemage">
+<a class="we_but" href="https://immaculategrid.pages.dev/" target="_blank"><button type="button" class="fav-btn" data-key="https://immaculategrid.pages.dev/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+<img width="70" height="70" loading="lazy" src="https://immaculategrid.pages.dev/icons/icon-72x72.png" alt="Immaculate Grid - a unique trivia game where players test their sports knowledge" class="wemage">
 <div class="we_d">
 <b>Immaculate Grid</b>
 </div>
 </a>
 
-<a class="we_but" href="https://heardle-game.pages.dev/" target="_blank" rel="noopener">
-<img loading="lazy" src="https://heardle-game.pages.dev/icons/icon-192x192.png" alt="Heardle Game - a music guessing game where players identify songs from short audio clips" class="wemage">
+<a class="we_but" href="https://heardle-game.pages.dev/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://heardle-game.pages.dev/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+<img width="70" height="70" loading="lazy" src="https://heardle-game.pages.dev/icons/icon-72x72.png" alt="Heardle Game - a music guessing game where players identify songs from short audio clips" class="wemage">
 <div class="we_d">
 <b>Heardle Game</b>
 </div>
 </a>
 
-<a class="we_but" href="https://jellytruckgame.pages.dev/" target="_blank" rel="noopener">
-<img loading="lazy" src="https://jellytruckgame.pages.dev/icons/icon-192x192.png" alt="Jelly Truck - a quirky physics-based driving game where players navigate a jelly-like truck through wobbly terrains" class="wemage">
+<a class="we_but" href="https://jellytruckgame.pages.dev/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://jellytruckgame.pages.dev/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+<img width="70" height="70" loading="lazy" src="https://jellytruckgame.pages.dev/icons/icon-72x72.png" alt="Jelly Truck - a quirky physics-based driving game where players navigate a jelly-like truck through wobbly terrains" class="wemage">
 <div class="we_d">
 <b>Jelly Truck</b>
 </div>
 </a>
 
-<a class="we_but" href="https://slither-io.pages.dev/" target="_blank" rel="noopener">
-<img loading="lazy" src="https://slither-io.pages.dev/icons/icon-192x192.png" alt="Slither IO - a classic multiplayer snake game with competitive mechanics" class="wemage">
+<a class="we_but" href="https://slither-io.pages.dev/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://slither-io.pages.dev/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+<img width="70" height="70" loading="lazy" src="https://slither-io.pages.dev/icons/icon-72x72.png" alt="Slither IO - a classic multiplayer snake game with competitive mechanics" class="wemage">
 <div class="we_d">
 <b>Slither IO</b>
 </div>
 </a>
 
-<a class="we_but" href="https://slitherio-online.com/" target="_blank" rel="noopener">
-<img loading="lazy" src="https://slitherio-online.com/icons/icon-192x192.png" alt="SlitherIO Online an online version of the popular Slither IO game" class="wemage">
+<a class="we_but" href="https://slitherio-online.com/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://slitherio-online.com/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+<img width="70" height="70" loading="lazy" src="https://slitherio-online.com/icons/icon-72x72.png" alt="SlitherIO Online an online version of the popular Slither IO game" class="wemage">
 <div class="we_d">
 <b>Slitherio Online</b>
 </div>
 </a>
 
-<a class="we_but" href="https://cupcake2048.org/" target="_blank" rel="noopener">
-<img loading="lazy" src="https://cupcake2048.org/css/img/icon-192x192.png" alt="Cupcake 2048 a dessert-themed 2048 game featuring colorful cupcakes" class="wemage">
+<a class="we_but" href="https://cupcake2048.org/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://cupcake2048.org/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+<img width="70" height="70" loading="lazy" src="https://cupcake2048.org/css/img/icon-72x72.png" alt="Cupcake 2048 a dessert-themed 2048 game featuring colorful cupcakes" class="wemage">
 <div class="we_d">
 <b>Cupcake 2048</b>
 </div>
 </a>
 
-<a class="we_but" href="https://kaloodinaz.github.io/wordle-unlimited/" target="_blank" rel="noopener">
-<img loading="lazy" src="https://kaloodinaz.github.io/wordle-unlimited/icons/icon-72x72.png?v=3" alt="Wordle Unlimited an endless version of the popular word-guessing game Wordle" class="wemage">
+<a class="we_but" href="https://kaloodinaz.github.io/wordle-unlimited/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://kaloodinaz.github.io/wordle-unlimited/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+<img width="70" height="70" loading="lazy" src="https://kaloodinaz.github.io/wordle-unlimited/icons/icon-72x72.png?v=3" alt="Wordle Unlimited an endless version of the popular word-guessing game Wordle" class="wemage">
 <div class="we_d">
 <b>Wordle Game</b>
 </div>
 </a>
 
-<a class="we_but" href="https://unlimited-wordle.org/" target="_blank" rel="noopener">
-<img loading="lazy" src="https://unlimited-wordle.org/icons/icon-72x72.png?v=3" alt="Wordle Unlimited an endless version of the popular word-guessing game Wordle" class="wemage">
+<a class="we_but" href="https://unlimited-wordle.org/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://unlimited-wordle.org/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+<img width="70" height="70" loading="lazy" src="https://unlimited-wordle.org/icons/icon-72x72.png?v=3" alt="Wordle Unlimited an endless version of the popular word-guessing game Wordle" class="wemage">
 <div class="we_d">
 <b>Wordle Unlimited</b>
 </div>
 </a>
 
-<a class="we_but" href="https://ricepurity.pages.dev/" target="_blank" rel="noopener">
-<img loading="lazy" src="https://ricepurity.pages.dev/apple-touch-icon.png" alt="Rice Purity Test an interactive self-assessment quiz for fun and reflection" class="wemage">
+<a class="we_but" href="https://ricepurity.pages.dev/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://ricepurity.pages.dev/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+<img width="70" height="70" loading="lazy" src="https://ricepurity.pages.dev/apple-touch-icon.png" alt="Rice Purity Test an interactive self-assessment quiz for fun and reflection" class="wemage">
 <div class="we_d">
 <b>Rice Purity Test</b>
 </div>
 </a>
 
-<a class="we_but" href="https://lifechecklist.pages.dev/" target="_blank" rel="noopener">
-<img loading="lazy" src="https://lifechecklist.pages.dev/favicon.png" alt="Life Checklist a fun and interactive way to track life milestones" class="wemage">
+<a class="we_but" href="https://lifechecklist.pages.dev/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://lifechecklist.pages.dev/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+<img width="70" height="70" loading="lazy" src="https://lifechecklist.pages.dev/favicon.png" alt="Life Checklist a fun and interactive way to track life milestones" class="wemage">
 <div class="we_d">
 <b>Life Checklist</b>
 </div>
 </a>
 
-<a class="we_but" href="https://progress-nealfun.pages.dev/" target="_blank" rel="noopener">
-<img loading="lazy" src="https://progress-nealfun.pages.dev/favicon.png" alt="Progress by Neal Fun a creative visualization tool to track human progress" class="wemage">
+<a class="we_but" href="https://progress-nealfun.pages.dev/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://progress-nealfun.pages.dev/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+<img width="70" height="70" loading="lazy" src="https://progress-nealfun.pages.dev/favicon.png" alt="Progress by Neal Fun a creative visualization tool to track human progress" class="wemage">
 <div class="we_d">
 <b>Progress by Neal Fun</b>
 </div>
 </a>
 
-<a class="we_but" href="https://wordle-connections.pages.dev/" target="_blank" rel="noopener">
-<img loading="lazy" src="https://wordle-connections.pages.dev/icons/icon-192x192.png" alt="Play Wordle Connections Game" class="wemage">
+<a class="we_but" href="https://wordle-connections.pages.dev/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://wordle-connections.pages.dev/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+<img width="70" height="70" loading="lazy" src="https://wordle-connections.pages.dev/icons/icon-72x72.png" alt="Play Wordle Connections Game" class="wemage">
 <div class="we_d">
 <b>Wordle Connections</b>
 </div>
 </a>
 
-<a class="we_but" href="https://google-snake-game.pages.dev/" target="_blank" rel="noopener">
-<img loading="lazy" src="https://google-snake-game.pages.dev/icons/icon-192x192.png" alt="Play Google Snake Game" class="wemage">
+<a class="we_but" href="https://google-snake-game.pages.dev/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://google-snake-game.pages.dev/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+<img width="70" height="70" loading="lazy" src="https://google-snake-game.pages.dev/icons/icon-72x72.png" alt="Play Google Snake Game" class="wemage">
 <div class="we_d">
 <b>Google Snake</b>
 </div>
 </a>
 
-<a class="we_but" href="https://dinosaur-google.pages.dev/" target="_blank" rel="noopener">
-<img loading="lazy" src="https://dinosaur-google.pages.dev/assets/img/logo.svg" alt="Play Dinosaur Game" class="wemage">
+<a class="we_but" href="https://dinosaur-google.pages.dev/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://dinosaur-google.pages.dev/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+<img width="70" height="70" loading="lazy" src="https://dinosaur-google.pages.dev/icons/icon-72x72.png" alt="Play Dinosaur Game" class="wemage">
 <div class="we_d">
 <b>Dinosaur Game</b>
 </div>
 </a>
 
-<a class="we_but" href="https://sudoku-online.pages.dev/" target="_blank" rel="noopener">
-<img loading="lazy" src="https://sudoku-online.pages.dev/icons/icon-192x192.png" alt="Play Sudoku Game" class="wemage">
+<a class="we_but" href="https://sudoku-online.pages.dev/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://sudoku-online.pages.dev/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+<img width="70" height="70" loading="lazy" src="https://sudoku-online.pages.dev/icons/icon-72x72.png" alt="Play Sudoku Game" class="wemage">
 <div class="we_d">
 <b>Sudoku Game</b>
 </div>
 </a>
 
-<a class="we_but" href="https://solitaire-free-online.pages.dev/" target="_blank" rel="noopener">
-<img loading="lazy" src="https://solitaire-free-online.pages.dev/icons/icon-192x192.png" alt="Play Solitaire Game" class="wemage">
+<a class="we_but" href="https://solitaire-free-online.pages.dev/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://solitaire-free-online.pages.dev/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+<img width="70" height="70" loading="lazy" src="https://solitaire-free-online.pages.dev/icons/icon-72x72.png" alt="Play Solitaire Game" class="wemage">
 <div class="we_d">
 <b>Solitaire Online</b>
 </div>
 </a>
 
-<a class="we_but" href="https://space-bar-clicker.pages.dev/" target="_blank" rel="noopener">
-<img loading="lazy" src="https://space-bar-clicker.pages.dev/icons/icon-192x192.png" alt="Play SpaceBar Clicker Game" class="wemage">
+<a class="we_but" href="https://space-bar-clicker.pages.dev/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://space-bar-clicker.pages.dev/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+<img width="70" height="70" loading="lazy" src="https://space-bar-clicker.pages.dev/icons/icon-72x72.png" alt="Play SpaceBar Clicker Game" class="wemage">
 <div class="we_d">
 <b>Spacebar Clicker</b>
 </div>
 </a>
 
-<a class="we_but" href="https://sprunkin.pages.dev/" target="_blank" rel="noopener">
-<img loading="lazy" src="https://sprunkin.pages.dev/icons/icon-192x192.png" alt="Play Sprunki Game" class="wemage">
+<a class="we_but" href="https://sprunkin.pages.dev/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://sprunkin.pages.dev/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+<img width="70" height="70" loading="lazy" src="https://sprunkin.pages.dev/icons/icon-72x72.png" alt="Play Sprunki Game" class="wemage">
 <div class="we_d">
 <b>Sprunki Game</b>
 </div>
 </a>
 
-<a class="we_but" href="https://unblocked-retrobowl.pages.dev/" target="_blank" rel="noopener">
-<img loading="lazy" src="https://unblocked-retrobowl.pages.dev/icons/icon-192x192.png" alt="Play RetroBowl Game" class="wemage">
+<a class="we_but" href="https://unblocked-retrobowl.pages.dev/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://unblocked-retrobowl.pages.dev/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+<img width="70" height="70" loading="lazy" src="https://unblocked-retrobowl.pages.dev/icons/icon-72x72.png" alt="Play RetroBowl Game" class="wemage">
 <div class="we_d">
 <b>Retro Bowl</b>
 </div>
 </a>
 
-<a class="we_but" href="https://mahjong-classic.pages.dev/" target="_blank" rel="noopener">
-<img loading="lazy" src="https://mahjong-classic.pages.dev/icons/icon-192x192.png" alt="Play Mahjong Classic Game" class="wemage">
+<a class="we_but" href="https://mahjong-classic.pages.dev/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://mahjong-classic.pages.dev/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+<img width="70" height="70" loading="lazy" src="https://mahjong-classic.pages.dev/icons/icon-72x72.png" alt="Play Mahjong Classic Game" class="wemage">
 <div class="we_d">
 <b>Mahjong Classic</b>
 </div>
 </a>
 
-<a class="we_but" href="https://blockblastgamefree.pages.dev/" target="_blank" rel="noopener">
-<img loading="lazy" src="https://blockblastgamefree.pages.dev/icons/icon-192x192.png" alt="Play BlockBlast Game" class="wemage">
+<a class="we_but" href="https://blockblastgamefree.pages.dev/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://blockblastgamefree.pages.dev/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+<img width="70" height="70" loading="lazy" src="https://blockblastgamefree.pages.dev/icons/icon-72x72.png" alt="Play BlockBlast Game" class="wemage">
 <div class="we_d">
 <b>Block Blast Game</b>
 </div>
 </a>
 
-<a class="we_but" href="https://blockbreakergame.pages.dev/" target="_blank" rel="noopener">
-<img loading="lazy" src="https://blockbreakergame.pages.dev/assets/img/block-breaker-logo.png" alt="Play Block Breaker Game" class="wemage">
+<a class="we_but" href="https://blockbreakergame.pages.dev/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://blockbreakergame.pages.dev/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+<img width="70" height="70" loading="lazy" src="https://blockbreakergame.pages.dev/assets/img/block-breaker-logo.png" alt="Play Block Breaker Game" class="wemage">
 <div class="we_d">
 <b>Google Block Breaker</b>
 </div>
 </a>
 
-<a class="we_but" href="https://doodlecricket.pages.dev/" target="_blank" rel="noopener">
-<img loading="lazy" src="https://doodlecricket.pages.dev/icons/icon-192x192.png" alt="Play Doodle Cricket Game" class="wemage">
+<a class="we_but" href="https://doodlecricket.pages.dev/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://doodlecricket.pages.dev/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+<img width="70" height="70" loading="lazy" src="https://doodlecricket.pages.dev/icons/icon-72x72.png" alt="Play Doodle Cricket Game" class="wemage">
 <div class="we_d">
 <b>Doodle Cricket</b>
 </div>
 </a>
 
-<a class="we_but" href="https://minesweeper-google.pages.dev/" target="_blank" rel="noopener">
-<img loading="lazy" src="https://minesweeper-google.pages.dev/icons/icon-192x192.png" alt="Play Google MineSweeper Game" class="wemage">
+<a class="we_but" href="https://minesweeper-google.pages.dev/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://minesweeper-google.pages.dev/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+<img width="70" height="70" loading="lazy" src="https://minesweeper-google.pages.dev/icons/icon-72x72.png" alt="Play Google MineSweeper Game" class="wemage">
 <div class="we_d">
 <b>Google Minesweeper</b>
 </div>
 </a>
 
-<a class="we_but" href="https://minesweeper-online.pages.dev/" target="_blank" rel="noopener">
-<img loading="lazy" src="https://minesweeper-online.pages.dev/favicon.ico" alt="Play MineSweeper Online Game" class="wemage">
+<a class="we_but" href="https://minesweeper-online.pages.dev/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://minesweeper-online.pages.dev/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+<img width="70" height="70" loading="lazy" src="https://minesweeper-online.pages.dev/icons/icon-72x72.png" alt="Play MineSweeper Online Game" class="wemage">
 <div class="we_d">
 <b>Minesweeper Online</b>
 </div>
 </a>
 
-<a class="we_but" href="https://squaredle.pages.dev/" target="_blank" rel="noopener">
-<img loading="lazy" src="https://squaredle.pages.dev/icons/icon-192x192.png" alt="Play Squaredle Game" class="wemage">
+<a class="we_but" href="https://squaredle.pages.dev/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://squaredle.pages.dev/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+<img width="70" height="70" loading="lazy" src="https://squaredle.pages.dev/icons/icon-72x72.png" alt="Play Squaredle Game" class="wemage">
 <div class="we_d">
 <b>Squaredle Game</b>
 </div>
 </a>
 
-<a class="we_but" href="https://slitherio-unblocked.pages.dev/" target="_blank" rel="noopener">
-<img loading="lazy" src="https://slitherio-unblocked.pages.dev/icons/icon-192x192.png" alt="Play Slitherio Game" class="wemage">
+<a class="we_but" href="https://slitherio-unblocked.pages.dev/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://slitherio-unblocked.pages.dev/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+<img width="70" height="70" loading="lazy" src="https://slitherio-unblocked.pages.dev/icons/icon-72x72.png" alt="Play Slitherio Game" class="wemage">
 <div class="we_d">
 <b>Slitherio Offline</b>
 </div>
 </a>
 
-<a class="we_but" href="https://pacman-online.pages.dev/" target="_blank" rel="noopener">
-<img loading="lazy" src="https://pacman-online.pages.dev/assets/img/favicon/apple-touch-icon.png" alt="Play Pacman Game" class="wemage">
+<a class="we_but" href="https://pacman-online.pages.dev/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://pacman-online.pages.dev/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+<img width="70" height="70" loading="lazy" src="https://pacman-online.pages.dev/assets/img/favicon/apple-touch-icon.png" alt="Play Pacman Game" class="wemage">
 <div class="we_d">
 <b>Pacman Game</b>
 </div>
 </a>
 
-<a class="we_but" href="https://squaresgame.pages.dev/" target="_blank" rel="noopener">
-<img loading="lazy" src="https://squaresgame.pages.dev/icons/icon-192x192.png" alt="Play Squares Game" class="wemage">
+<a class="we_but" href="https://squaresgame.pages.dev/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://squaresgame.pages.dev/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+<img width="70" height="70" loading="lazy" src="https://squaresgame.pages.dev/icons/icon-72x72.png" alt="Play Squares Game" class="wemage">
 <div class="we_d">
 <b>Squares Game</b>
 </div>
 </a>
 
-<a class="we_but" href="https://doodlebaseball.pages.dev/" target="_blank" rel="noopener">
-<img loading="lazy" src="https://doodlebaseball.pages.dev/icons/icon-192x192.png" alt="Play Doodle Baseball Game" class="wemage">
+<a class="we_but" href="https://doodlebaseball.pages.dev/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://doodlebaseball.pages.dev/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+<img width="70" height="70" loading="lazy" src="https://doodlebaseball.pages.dev/icons/icon-72x72.png" alt="Play Doodle Baseball Game" class="wemage">
 <div class="we_d">
 <b>Doodle Baseball</b>
 </div>
 </a>
 
-<a class="we_but" href="https://google-snake-mods.pages.dev/" target="_blank" rel="noopener">
-<img loading="lazy" src="https://google-snake-mods.pages.dev/img/snake_logo.png" alt="Play Doogle Snake Mods Game" class="wemage">
+<a class="we_but" href="https://google-snake-mods.pages.dev/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://google-snake-mods.pages.dev/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+<img width="70" height="70" loading="lazy" src="https://google-snake-mods.pages.dev/icons/icon-72x72.png" alt="Play Doogle Snake Mods Game" class="wemage">
 <div class="we_d">
 <b>Doodle Snake Mods</b>
 </div>
 </a>
 
-<a class="we_but" href="https://flappybird2.pages.dev/" target="_blank" rel="noopener">
-<img loading="lazy" src="https://flappybird2.pages.dev/assets/img/favicon/apple-touch-icon.png" alt="Play Flappy Bird 2 Game" class="wemage">
+<a class="we_but" href="https://flappybird2.pages.dev/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://flappybird2.pages.dev/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+<img width="70" height="70" loading="lazy" src="https://flappybird2.pages.dev/icons/icon-72x72.png" alt="Play Flappy Bird 2 Game" class="wemage">
 <div class="we_d">
 <b>Flappy Bird 2</b>
 </div>
 </a>
 
-<a class="we_but" href="https://2048game-hjd.pages.dev/" target="_blank" rel="noopener">
-<img loading="lazy" src="https://2048game-hjd.pages.dev/icons/icon-192x192.png" alt="Play 2048 Game" class="wemage">
+<a class="we_but" href="https://2048game-hjd.pages.dev/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://2048game-hjd.pages.dev/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+<img width="70" height="70" loading="lazy" src="https://2048game-hjd.pages.dev/icons/icon-72x72.png" alt="Play 2048 Game" class="wemage">
 <div class="we_d">
 <b>2048 game</b>
 </div>
 </a>
 
-<a class="we_but" href="https://cookieclickergame.pages.dev/" target="_blank" rel="noopener">
-<img loading="lazy" src="https://cookieclickergame.pages.dev/icons/icon-192x192.png" alt="Play Cookie Clicker Game" class="wemage">
+<a class="we_but" href="https://cookieclickergame.pages.dev/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://cookieclickergame.pages.dev/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+<img width="70" height="70" loading="lazy" src="https://cookieclickergame.pages.dev/icons/icon-72x72.png" alt="Play Cookie Clicker Game" class="wemage">
 <div class="we_d">
 <b>Cookie Clicker</b>
 </div>
 </a>
 
-<a class="we_but" href="https://dordlewordle.pages.dev/" target="_blank" rel="noopener">
-  <img loading="lazy" src="https://dordlewordle.pages.dev/icons/icon-192x192.png" alt="Play Dordlewordle Game" class="wemage">
+<a class="we_but" href="https://dordlewordle.pages.dev/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://dordlewordle.pages.dev/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+  <img width="70" height="70" loading="lazy" src="https://dordlewordle.pages.dev/icons/icon-72x72.png" alt="Play Dordlewordle Game" class="wemage">
   <div class="we_d"><b>Dordlewordle</b></div>
 </a>
 
-<a class="we_but" href="https://combinations.pages.dev/" target="_blank" rel="noopener">
-  <img loading="lazy" src="https://combinations.pages.dev/icons/icon-192x192.png" alt="Play Combinations Game" class="wemage">
+<a class="we_but" href="https://combinations.pages.dev/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://combinations.pages.dev/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+  <img width="70" height="70" loading="lazy" src="https://combinations.pages.dev/icons/icon-72x72.png" alt="Play Combinations Game" class="wemage">
   <div class="we_d"><b>Combinations</b></div>
 </a>
 
-<a class="we_but" href="https://strandsnyt.pages.dev/" target="_blank" rel="noopener">
-  <img loading="lazy" src="https://strandsnyt.pages.dev/icons/icon-192x192.png" alt="Play Strandsnyt Game" class="wemage">
+<a class="we_but" href="https://strandsnyt.pages.dev/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://strandsnyt.pages.dev/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+  <img width="70" height="70" loading="lazy" src="https://strandsnyt.pages.dev/icons/icon-72x72.png" alt="Play Strandsnyt Game" class="wemage">
   <div class="we_d"><b>Strands nyt</b></div>
 </a>
 
-<a class="we_but" href="https://quordlegame.pages.dev/" target="_blank" rel="noopener">
-  <img loading="lazy" src="https://quordlegame.pages.dev/icons/icon-192x192.png" alt="Play Quordle Game" class="wemage">
+<a class="we_but" href="https://quordlegame.pages.dev/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://quordlegame.pages.dev/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+  <img width="70" height="70" loading="lazy" src="https://quordlegame.pages.dev/icons/icon-72x72.png" alt="Play Quordle Game" class="wemage">
   <div class="we_d"><b>Quordle</b></div>
 </a>
 
-<a class="we_but" href="https://octordlewordle.pages.dev/" target="_blank" rel="noopener">
-  <img loading="lazy" src="https://octordlewordle.pages.dev/icons/icon-192x192.png" alt="Play Octordlewordle Game" class="wemage">
+<a class="we_but" href="https://octordlewordle.pages.dev/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://octordlewordle.pages.dev/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+  <img width="70" height="70" loading="lazy" src="https://octordlewordle.pages.dev/icons/icon-72x72.png" alt="Play Octordlewordle Game" class="wemage">
   <div class="we_d"><b>Octordle wordle</b></div>
 </a>
 
-<a class="we_but" href="https://sedecordle.pages.dev/" target="_blank" rel="noopener">
-  <img loading="lazy" src="https://sedecordle.pages.dev/icons/icon-192x192.png" alt="Play Sedecordle Game" class="wemage">
+<a class="we_but" href="https://sedecordle.pages.dev/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://sedecordle.pages.dev/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+  <img width="70" height="70" loading="lazy" src="https://sedecordle.pages.dev/icons/icon-72x72.png" alt="Play Sedecordle Game" class="wemage">
   <div class="we_d"><b>Sedecordle</b></div>
 </a>
 
-<a class="we_but" href="https://duotrigordle.pages.dev/" target="_blank" rel="noopener">
-  <img loading="lazy" src="https://duotrigordle.pages.dev/icons/icon-192x192.png" alt="Play Duotrigordle Game" class="wemage">
+<a class="we_but" href="https://duotrigordle.pages.dev/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://duotrigordle.pages.dev/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+  <img width="70" height="70" loading="lazy" src="https://duotrigordle.pages.dev/icons/icon-72x72.png" alt="Play Duotrigordle Game" class="wemage">
   <div class="we_d"><b>Duotrigordle</b></div>
 </a>
 
-<a class="we_but" href="https://64ordle.pages.dev/" target="_blank" rel="noopener">
-  <img loading="lazy" src="https://64ordle.pages.dev/icons/icon-192x192.png" alt="Play 64 Wordle Game" class="wemage">
+<a class="we_but" href="https://64ordle.pages.dev/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://64ordle.pages.dev/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+  <img width="70" height="70" loading="lazy" src="https://64ordle.pages.dev/icons/icon-72x72.png" alt="Play 64 Wordle Game" class="wemage">
   <div class="we_d"><b>64 Wordle</b></div>
 </a>
 
-<a class="we_but" href="https://nytconnections.pages.dev/" target="_blank" rel="noopener">
-  <img loading="lazy" src="https://nytconnections.pages.dev/icons/icon-192x192.png" alt="Play NYT Connections Game" class="wemage">
+<a class="we_but" href="https://nytconnections.pages.dev/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://nytconnections.pages.dev/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+  <img width="70" height="70" loading="lazy" src="https://nytconnections.pages.dev/icons/icon-72x72.png" alt="Play NYT Connections Game" class="wemage">
   <div class="we_d"><b>NYT Connections</b></div>
 </a>
 
-<a class="we_but" href="https://nytspellingbee.pages.dev/" target="_blank" rel="noopener">
-  <img loading="lazy" src="https://nytspellingbee.pages.dev/icons/icon-192x192.png" alt="Play NYT Spelling Bee Game" class="wemage">
+<a class="we_but" href="https://nytspellingbee.pages.dev/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://nytspellingbee.pages.dev/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+  <img width="70" height="70" loading="lazy" src="https://nytspellingbee.pages.dev/icons/icon-72x72.png" alt="Play NYT Spelling Bee Game" class="wemage">
   <div class="we_d"><b>Spelling Bee</b></div>
 </a>
 
-<a class="we_but" href="https://phrazle.pages.dev/" target="_blank" rel="noopener">
-  <img loading="lazy" src="https://phrazle.pages.dev/icons/icon-192x192.png" alt="Play Phrazle Game" class="wemage">
+<a class="we_but" href="https://phrazle.pages.dev/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://phrazle.pages.dev/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+  <img width="70" height="70" loading="lazy" src="https://phrazle.pages.dev/icons/icon-72x72.png" alt="Play Phrazle Game" class="wemage">
   <div class="we_d"><b>Phrazle</b></div>
 </a>
 
-<a class="we_but" href="https://wordsearchpuzzles.pages.dev/" target="_blank" rel="noopener">
-  <img loading="lazy" src="https://wordsearchpuzzles.pages.dev/icons/icon-192x192.png" alt="Play Word Search Game" class="wemage">
+<a class="we_but" href="https://wordsearchpuzzles.pages.dev/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://wordsearchpuzzles.pages.dev/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+  <img width="70" height="70" loading="lazy" src="https://wordsearchpuzzles.pages.dev/icons/icon-72x72.png" alt="Play Word Search Game" class="wemage">
   <div class="we_d"><b>Word Search</b></div>
 </a>
 
-<a class="we_but" href="https://crosswordpuzzles.pages.dev/" target="_blank" rel="noopener">
-  <img loading="lazy" src="https://crosswordpuzzles.pages.dev/icons/icon-192x192.png" alt="Play Crossword Game" class="wemage">
+<a class="we_but" href="https://crosswordpuzzles.pages.dev/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://crosswordpuzzles.pages.dev/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+  <img width="70" height="70" loading="lazy" src="https://crosswordpuzzles.pages.dev/icons/icon-72x72.png" alt="Play Crossword Game" class="wemage">
   <div class="we_d"><b>Crossword</b></div>
 </a>
 
-<a class="we_but" href="https://weavergame.pages.dev/" target="_blank" rel="noopener">
-  <img loading="lazy" src="https://weavergame.pages.dev/icons/icon-192x192.png" alt="Play Weaver Game" class="wemage">
+<a class="we_but" href="https://weavergame.pages.dev/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://weavergame.pages.dev/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+  <img width="70" height="70" loading="lazy" src="https://weavergame.pages.dev/icons/icon-72x72.png" alt="Play Weaver Game" class="wemage">
   <div class="we_d"><b>Weaver</b></div>
 </a>
 
-<a class="we_but" href="https://globlegame.pages.dev/" target="_blank" rel="noopener">
-  <img loading="lazy" src="https://globlegame.pages.dev/icons/icon-192x192.png" alt="Play Globle Game" class="wemage">
+<a class="we_but" href="https://globlegame.pages.dev/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://globlegame.pages.dev/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+  <img width="70" height="70" loading="lazy" src="https://globlegame.pages.dev/icons/icon-72x72.png" alt="Play Globle Game" class="wemage">
   <div class="we_d"><b>Globle</b></div>
 </a>
 
-<a class="we_but" href="https://worldle-game.pages.dev/" target="_blank" rel="noopener">
-  <img loading="lazy" src="https://worldle-game.pages.dev/icons/icon-192x192.png" alt="Play Worldle Game" class="wemage">
+<a class="we_but" href="https://worldle-game.pages.dev/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://worldle-game.pages.dev/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+  <img width="70" height="70" loading="lazy" src="https://worldle-game.pages.dev/icons/icon-72x72.png" alt="Play Worldle Game" class="wemage">
   <div class="we_d"><b>Worldle</b></div>
 </a>
 
-<a class="we_but" href="https://numberwordle.pages.dev/" target="_blank" rel="noopener">
-  <img loading="lazy" src="https://numberwordle.pages.dev/icons/icon-192x192.png" alt="Play Number Wordle Game" class="wemage">
+<a class="we_but" href="https://numberwordle.pages.dev/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://numberwordle.pages.dev/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+  <img width="70" height="70" loading="lazy" src="https://numberwordle.pages.dev/icons/icon-72x72.png" alt="Play Number Wordle Game" class="wemage">
   <div class="we_d"><b>Number Wordle</b></div>
 </a>
 
-<a class="we_but" href="https://kaloodinaz.github.io/tic-tac-toe/" target="_blank" rel="noopener">
-  <img loading="lazy" src="https://kaloodinaz.github.io/tic-tac-toe/resources/images/example.png" alt="Play Tic-Tac-Toe Game" class="wemage">
+<a class="we_but" href="https://kaloodinaz.github.io/tic-tac-toe/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://kaloodinaz.github.io/tic-tac-toe/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+  <img width="70" height="70" loading="lazy" src="https://kaloodinaz.github.io/tic-tac-toe/resources/images/example.png" alt="Play Tic-Tac-Toe Game" class="wemage">
   <div class="we_d"><b>Tic-Tac-Toe</b></div>
 </a>
 
-<a class="we_but" href="https://tabletennisgame.pages.dev/" target="_blank" rel="noopener">
-  <img loading="lazy" src="https://tabletennisgame.pages.dev/apple-touch-icon.png" alt="Play Ping Pong Game" class="wemage">
+<a class="we_but" href="https://tabletennisgame.pages.dev/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://tabletennisgame.pages.dev/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+  <img width="70" height="70" loading="lazy" src="https://tabletennisgame.pages.dev/icons/icon-72x72.png" alt="Play Ping Pong Game" class="wemage">
   <div class="we_d"><b>Retro Ping Pong</b></div>
 </a>
 
-<a class="we_but" href="https://planetclickergame.pages.dev/" target="_blank" rel="noopener">
-  <img loading="lazy" src="https://planetclickergame.pages.dev/icons/icon-192x192.png" alt="Play Planet Clicker Game" class="wemage">
+<a class="we_but" href="https://planetclickergame.pages.dev/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://planetclickergame.pages.dev/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+  <img width="70" height="70" loading="lazy" src="https://planetclickergame.pages.dev/icons/icon-72x72.png" alt="Play Planet Clicker Game" class="wemage">
   <div class="we_d"><b>Planet Clicker</b></div>
 </a>
 
-<a class="we_but" href="https://redbuttongame.pages.dev/" target="_blank" rel="noopener">
-  <img loading="lazy" src="https://redbuttongame.pages.dev/favicon.ico" alt="Play Click the Red Button" class="wemage">
+<a class="we_but" href="https://redbuttongame.pages.dev/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://redbuttongame.pages.dev/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+  <img width="70" height="70" loading="lazy" src="https://redbuttongame.pages.dev/icons/icon-72x72.png" alt="Play Click the Red Button" class="wemage">
   <div class="we_d"><b>Click the Red Button</b></div>
 </a>
 
-<a class="we_but" href="https://polkadotgame.pages.dev/" target="_blank" rel="noopener">
-  <img loading="lazy" src="https://polkadotgame.pages.dev/favicon-32x32.png" alt="Play polka dot game 2" class="wemage">
+<a class="we_but" href="https://polkadotgame.pages.dev/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://polkadotgame.pages.dev/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+  <img width="70" height="70" loading="lazy" src="https://polkadotgame.pages.dev/icons/icon-72x72.png" alt="Play polka dot game 2" class="wemage">
   <div class="we_d"><b>Polka Dot 2</b></div>
 </a>
 
-<a class="we_but" href="https://agario-unblocked.pages.dev/" target="_blank" rel="noopener">
-  <img loading="lazy" src="https://agario-unblocked.pages.dev/icons/icon-192x192.png" alt="Play Agar.io unblocked" class="wemage">
+<a class="we_but" href="https://agario-unblocked.pages.dev/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://agario-unblocked.pages.dev/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+  <img width="70" height="70" loading="lazy" src="https://agario-unblocked.pages.dev/icons/icon-72x72.png" alt="Play Agar.io unblocked" class="wemage">
   <div class="we_d"><b>Agario Unblocked</b></div>
 </a>
 
-<a class="we_but" href="https://snakeio.pages.dev/" target="_blank" rel="noopener">
-  <img loading="lazy" src="https://snakeio.pages.dev/icons/icon-192x192.png" alt="Play Snake.io unblocked" class="wemage">
+<a class="we_but" href="https://snakeio.pages.dev/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://snakeio.pages.dev/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+  <img width="70" height="70" loading="lazy" src="https://snakeio.pages.dev/icons/icon-72x72.png" alt="Play Snake.io unblocked" class="wemage">
   <div class="we_d"><b>Snakeio unblocked</b></div>
 </a>
 
-<a class="we_but" href="https://hole-io-unblocked.pages.dev/" target="_blank" rel="noopener">
-  <img loading="lazy" src="https://hole-io-unblocked.pages.dev/icons/icon-192x192.png" alt="Play Hole.io 2" class="wemage">
+<a class="we_but" href="https://hole-io-unblocked.pages.dev/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://hole-io-unblocked.pages.dev/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+  <img width="70" height="70" loading="lazy" src="https://hole-io-unblocked.pages.dev/icons/icon-72x72.png" alt="Play Hole.io 2" class="wemage">
   <div class="we_d"><b>Hole.io 2</b></div>
 </a>
 
-<a class="we_but" href="https://diepio2.pages.dev/" target="_blank" rel="noopener">
-  <img loading="lazy" src="https://diepio2.pages.dev/icons/icon-192x192.png" alt="Play Diepio 2" class="wemage">
+<a class="we_but" href="https://diepio2.pages.dev/" target="_blank" rel="noopener"><button type="button" class="fav-btn" data-key="https://diepio2.pages.dev/" aria-label="Save to favorites" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6Z" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+  <img width="70" height="70" loading="lazy" src="https://diepio2.pages.dev/icons/icon-72x72.png" alt="Play Diepio 2" class="wemage">
   <div class="we_d"><b>Diep.io 2</b></div>
 </a>
 
@@ -719,13 +832,15 @@ if('serviceWorker' in navigator){window.addEventListener('load',()=>{navigator.s
 <div class="container">
 <p class="eyebrow text-center" style="display:block">Why This List</p>
 <h2 class="text-center">Key Features</h2>
+<p class="lede text-center">This isn't just a pile of links - it's a shelf that's been kept tidy on purpose. Here's what makes browsing and playing here easy, whether you've got five minutes or the whole afternoon.</p>
 <div class="features-grid">
-<div class="feature-card"><div class="ic">⚡</div><h3>Instant Play</h3><p>Every game loads straight in your browser - no downloads, installs or waiting.</p></div>
-<div class="feature-card"><div class="ic">🆓</div><h3>Completely Free</h3><p>No hidden fees or paywalls. Just click a game and start playing right away.</p></div>
-<div class="feature-card"><div class="ic">📱</div><h3>Works Everywhere</h3><p>The list and most games adapt to phones, tablets and desktops alike.</p></div>
-<div class="feature-card"><div class="ic">🌗</div><h3>Light &amp; Dark Mode</h3><p>Switch themes with one tap so late-night gaming sessions are easier on the eyes.</p></div>
-<div class="feature-card"><div class="ic">🔄</div><h3>Regularly Updated</h3><p>New io games, Wordle spinoffs and browser classics get added as they're discovered.</p></div>
-<div class="feature-card"><div class="ic">🎯</div><h3>Something for Everyone</h3><p>Puzzles, word games, arcade classics and multiplayer battles all in one place.</p></div>
+<div class="feature-card"><div class="ic">⚡</div><h3>Instant Play</h3><p>Every game loads straight in your browser the moment you click - no downloads, no installs, no waiting around for a launcher to open.</p></div>
+<div class="feature-card"><div class="ic">🆓</div><h3>Completely Free</h3><p>No hidden fees, no paywalls and no surprise subscriptions. Click a game and start playing right away, exactly as it is.</p></div>
+<div class="feature-card"><div class="ic">📱</div><h3>Works Everywhere</h3><p>The list itself is fully responsive, and most games are built to adapt to phones, tablets and desktops so you're never stuck resizing a window.</p></div>
+<div class="feature-card"><div class="ic">🌗</div><h3>Light &amp; Dark Mode</h3><p>Switch themes with one tap using the toggle in the header - handy for late-night gaming sessions when a bright white page is the last thing you want.</p></div>
+<div class="feature-card"><div class="ic">🔄</div><h3>Regularly Updated</h3><p>New io games, Wordle spinoffs and browser classics get added as they're discovered, so the collection keeps growing instead of going stale.</p></div>
+<div class="feature-card"><div class="ic">🎯</div><h3>Something for Everyone</h3><p>Puzzles, word games, arcade classics, strategy titles and multiplayer battles all sit side by side, so there's always something that fits your mood.</p></div>
+<div class="feature-card"><div class="ic">🔎</div><h3>Fast Search</h3><p>Typing a name into the search box above the game grid narrows the list instantly, so you can skip the scrolling and get straight to playing.</p></div>
 </div>
 </div>
 </section>
@@ -742,14 +857,14 @@ if('serviceWorker' in navigator){window.addEventListener('load',()=>{navigator.s
 <div class="container">
 <p class="eyebrow text-center" style="display:block">Quick Guide</p>
 <h2 class="text-center">How to Play io Games</h2>
-<p class="lede text-center">Getting started takes less time than reading this sentence. Here's the rundown in six easy steps:</p>
+<p class="lede text-center">Getting started takes less time than reading this sentence. There's no manual to read and no account wall to get past - just six small steps between you and your first round, whether it's a quiet puzzle or a live multiplayer battle.</p>
 <div class="steps-grid">
-<div class="step-card"><div class="step-num">1</div><h3>Pick a game</h3><p>Scroll the list above and choose whatever catches your eye - every card links straight to the game.</p></div>
-<div class="step-card"><div class="step-num">2</div><h3>Open it in your browser</h3><p>Click or tap the card. It opens in a new tab and loads immediately, no install required.</p></div>
-<div class="step-card"><div class="step-num">3</div><h3>Set a nickname</h3><p>If it's multiplayer, enter a nickname or customize your character before diving in.</p></div>
-<div class="step-card"><div class="step-num">4</div><h3>Learn the controls</h3><p>Most games run on simple mouse and keyboard input - check the in-game tutorial if there is one.</p></div>
-<div class="step-card"><div class="step-num">5</div><h3>Start playing</h3><p>Jump into a round, match or puzzle and get a feel for the pace.</p></div>
-<div class="step-card"><div class="step-num">6</div><h3>Compete and improve</h3><p>Chase the leaderboard, beat your own best score, or come back tomorrow for something new.</p></div>
+<div class="step-card"><div class="step-num">1</div><h3>Pick a game</h3><p>Scroll the list above, or use the search box to jump straight to a name you know - every card links directly to the game itself.</p></div>
+<div class="step-card"><div class="step-num">2</div><h3>Open it in your browser</h3><p>Click or tap the card. It opens in a new tab and loads immediately, with no install, no plugin and no waiting screen.</p></div>
+<div class="step-card"><div class="step-num">3</div><h3>Set a nickname</h3><p>If it's multiplayer, most games ask for a nickname or let you pick a color or skin before you're dropped into a match.</p></div>
+<div class="step-card"><div class="step-num">4</div><h3>Learn the controls</h3><p>Most games run on simple mouse and keyboard input, and many show a short in-game tutorial the first time you play.</p></div>
+<div class="step-card"><div class="step-num">5</div><h3>Start playing</h3><p>Jump into a round, match or puzzle and get a feel for the pace before worrying about strategy.</p></div>
+<div class="step-card"><div class="step-num">6</div><h3>Compete and improve</h3><p>Chase the leaderboard, beat your own best score, or simply come back tomorrow for a fresh challenge.</p></div>
 </div>
 </div>
 </section>
@@ -758,12 +873,14 @@ if('serviceWorker' in navigator){window.addEventListener('load',()=>{navigator.s
 <div class="container">
 <p class="eyebrow text-center" style="display:block">The Appeal</p>
 <h2 class="text-center">Why Play io Games?</h2>
+<p class="lede text-center">io games earned their popularity by stripping gaming down to the fun part. There's no story to sit through and no long tutorial - you load a game, understand it in seconds, and you're already competing. Here's what keeps people coming back.</p>
 <div class="features-grid">
-<div class="feature-card"><h3>Accessible</h3><p>Play directly in your browser tab - nothing to install on any device.</p></div>
-<div class="feature-card"><h3>Free-to-Play</h3><p>Enjoy dozens of games without spending a cent.</p></div>
-<div class="feature-card"><h3>Multiplayer Fun</h3><p>Compete against real players from around the world in real time.</p></div>
-<div class="feature-card"><h3>Short Sessions</h3><p>Perfect for a five-minute break or a full afternoon.</p></div>
-<div class="feature-card"><h3>Real Variety</h3><p>Puzzles, word games, shooters and strategy titles all live side by side.</p></div>
+<div class="feature-card"><h3>Accessible</h3><p>Play directly in your browser tab on any device - nothing to install, register for, or update later.</p></div>
+<div class="feature-card"><h3>Free-to-Play</h3><p>Enjoy dozens of games without spending a cent, so trying something new never feels like a risk.</p></div>
+<div class="feature-card"><h3>Multiplayer Fun</h3><p>Compete against real players from around the world in real time, with matches that usually last just a few minutes.</p></div>
+<div class="feature-card"><h3>Short Sessions</h3><p>Perfect for a five-minute break between tasks or a full afternoon of chasing a high score.</p></div>
+<div class="feature-card"><h3>Real Variety</h3><p>Puzzles, word games, shooters and strategy titles all live side by side, so switching moods only takes one click.</p></div>
+<div class="feature-card"><h3>Low Commitment</h3><p>No downloads to babysit and no save file to protect - close the tab any time and pick up wherever you like next time.</p></div>
 </div>
 </div>
 </section>
@@ -787,22 +904,12 @@ if('serviceWorker' in navigator){window.addEventListener('load',()=>{navigator.s
 <p class="eyebrow" style="display:block">Spread the Word</p>
 <h2>Share This List</h2>
 <div class="share-buttons">
-<button class="share-btn share-x" onclick="shareX()" aria-label="Share on X">
-<svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/></svg>
-Twitter</button>
-<button class="share-btn share-whatsapp" onclick="shareWhatsApp()" aria-label="Share on WhatsApp">
-<svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/></svg>
-WhatsApp</button>
-<button class="share-btn share-reddit" onclick="shareReddit()" aria-label="Share on Reddit">
-<svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M4 10a1 1 0 112 0 1 1 0 01-2 0zm6 0a1 1 0 112 0 1 1 0 01-2 0zm.049 2.137a.593.593 0 11.735.933c-.717.565-1.81.93-2.783.93s-2.066-.365-2.784-.93a.593.593 0 11.735-.933c.413.325 1.23.675 2.049.675s1.636-.35 2.049-.675zM16 8a2 2 0 00-3.748-.972c-1.028-.562-2.28-.926-3.645-1.01L9.8 3.338l2.284.659a1.5 1.5 0 10.094-1.209l-2.545-.735a.593.593 0 00-.707.329L7.305 6.023c-1.33.094-2.551.453-3.557 1.004a2 2 0 10-2.555 2.802A3.661 3.661 0 001 10.999c0 2.761 3.134 5 7 5s7-2.239 7-5c0-.403-.067-.795-.193-1.17A2 2 0 0016 7.999zm-2.5-5.062a.563.563 0 110 1.126.563.563 0 010-1.126zM1 8a1 1 0 011.904-.427 5.292 5.292 0 00-1.276 1.355A1.001 1.001 0 011 8zm7 6.813c-3.21 0-5.813-1.707-5.813-3.813S4.789 7.187 8 7.187c3.21 0 5.813 1.707 5.813 3.813S11.211 14.813 8 14.813zm6.372-5.885a5.276 5.276 0 00-1.276-1.355C13.257 7.235 13.601 7 14 7a1.001 1.001 0 01.372 1.928z"/></svg>
-Reddit</button>
-<button class="share-btn share-facebook" onclick="shareFacebook()" aria-label="Share on Facebook">
-<svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/></svg>
-Facebook</button>
-<button class="share-btn share-telegram" onclick="shareTelegram()" aria-label="Share on Telegram">
-<svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.287 5.906q-1.168.486-4.666 2.01-.567.225-.595.442c-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294q.39.01.868-.32 3.269-2.206 3.374-2.23c.05-.012.12-.026.166.016s.042.12.037.141c-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8 8 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629q.14.092.27.187c.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.4 1.4 0 0 0-.013-.315.34.34 0 0 0-.114-.217.53.53 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09"/></svg>
-Telegram</button>
-<button class="share-btn share-copy" id="copyBtn" onclick="copyLink()" aria-label="Copy link">🔗 Copy Link</button>
+<button class="share-btn share-x" onclick="shareX()" aria-label="Share on X"><svg viewBox="0 0 24 24"><path d="M18.9 2H22l-7.4 8.5L23.3 22h-6.8l-5.3-6.9L5 22H1.9l7.9-9L1 2h7l4.8 6.3L18.9 2Zm-1.2 18h1.9L7.4 4H5.4l12.3 16Z"/></svg><span>Twitter</span></button>
+<button class="share-btn share-whatsapp" onclick="shareWhatsApp()" aria-label="Share on WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.1-1.3A10 10 0 1 0 12 2Zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20Zm4.4-5.9c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1-1.4-.7-2.3-1.2-3.3-2.7-.2-.3.2-.3.6-1 .1-.2 0-.3 0-.5L9.2 8.9c-.2-.4-.4-.4-.5-.4h-.5c-.2 0-.5.1-.7.3-.2.2-.9.9-.9 2.2s1 2.6 1.1 2.7c.1.2 2 3 4.7 4.2 2 .8 2.4.7 2.8.6.6-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1-.1-.1-.2-.2-.5-.3Z"/></svg><span>WhatsApp</span></button>
+<button class="share-btn share-reddit" onclick="shareReddit()" aria-label="Share on Reddit"><svg viewBox="0 0 24 24"><path d="M22 12a2 2 0 0 0-3.4-1.4 8.4 8.4 0 0 0-4.2-1.3l.7-2.8 2 .5a1.4 1.4 0 1 0 .2-.9l-2.4-.6a.5.5 0 0 0-.6.4l-.8 3.4a8.4 8.4 0 0 0-4.3 1.3A2 2 0 1 0 6 14.2v.1a4 4 0 0 0 0 .5c0 2.5 2.9 4.5 6.5 4.5s6.5-2 6.5-4.5a4 4 0 0 0 0-.5v-.1A2 2 0 0 0 22 12Zm-13 1a1.2 1.2 0 1 1 1.2 1.2A1.2 1.2 0 0 1 9 13Zm7 4.1c-.9.6-2 .9-3.5.9s-2.6-.3-3.5-.9a.4.4 0 0 1 .5-.7c.7.5 1.7.8 3 .8s2.3-.3 3-.8a.4.4 0 1 1 .5.7ZM15 14.2a1.2 1.2 0 1 1 1.2-1.2 1.2 1.2 0 0 1-1.2 1.2Z"/></svg><span>Reddit</span></button>
+<button class="share-btn share-facebook" onclick="shareFacebook()" aria-label="Share on Facebook"><svg viewBox="0 0 24 24"><path d="M13.5 21v-7.6h2.6l.4-3h-3v-1.9c0-.9.2-1.5 1.5-1.5h1.6V4.2A21 21 0 0 0 14 4c-2.2 0-3.8 1.4-3.8 3.9v2.5H7.6v3h2.6V21Z"/></svg><span>Facebook</span></button>
+<button class="share-btn share-telegram" onclick="shareTelegram()" aria-label="Share on Telegram"><svg viewBox="0 0 24 24"><path d="M21.7 3.5 2.9 10.9c-1.2.5-1.2 1.2-.2 1.5l4.8 1.5L18.9 6.8c.5-.3 1-.2.6.2l-9 8.2h0l-.3 4.7c.4 0 .6-.2.9-.5l2.1-2 4.4 3.3c.8.4 1.4.2 1.6-.7l3-14.2c.3-1.1-.4-1.6-1.5-1.3Z"/></svg><span>Telegram</span></button>
+<button class="share-btn share-copy" id="copyBtn" onclick="copyLink()" aria-label="Copy link"><svg viewBox="0 0 24 24"><path d="M16 1H4a2 2 0 0 0-2 2v14h2V3h12Zm3 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2Zm0 16H8V7h11Z"/></svg><span id="copyLabel">Copy Link</span></button>
 </div>
 </div>
 </section>
@@ -823,10 +930,11 @@ Telegram</button>
 document.getElementById('currentYear').textContent = new Date().getFullYear();
 
 var toggleBtn = document.getElementById('themeToggle');
+var ttLabel = toggleBtn.querySelector('.tt-label');
 function applyThemeLabel(){
   var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-  toggleBtn.textContent = isDark ? '☀️ Light mode' : '🌙 Dark mode';
   toggleBtn.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+  if(ttLabel){ ttLabel.textContent = isDark ? 'Light Mode' : 'Dark Mode'; }
 }
 applyThemeLabel();
 toggleBtn.addEventListener('click', function(){
@@ -837,6 +945,135 @@ toggleBtn.addEventListener('click', function(){
   applyThemeLabel();
 });
 
+var menuBtn = document.getElementById('menuToggle');
+var mainMenu = document.getElementById('mainMenu');
+function closeMenu(){
+  mainMenu.classList.remove('open');
+  menuBtn.setAttribute('aria-expanded','false');
+}
+menuBtn.addEventListener('click', function(){
+  var open = mainMenu.classList.toggle('open');
+  menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+});
+document.addEventListener('click', function(e){
+  if(!mainMenu.contains(e.target) && !menuBtn.contains(e.target)){
+    closeMenu();
+  }
+});
+document.addEventListener('keydown', function(e){
+  if(e.key === 'Escape'){ closeMenu(); }
+});
+Array.prototype.slice.call(mainMenu.querySelectorAll('a')).forEach(function(link){
+  link.addEventListener('click', closeMenu);
+});
+
+var gameSearch = document.getElementById('gameSearch');
+var gameSearchClear = document.getElementById('gameSearchClear');
+var gameCards = Array.prototype.slice.call(document.querySelectorAll('.games-grid .we_but'));
+var gamesCountEl = document.getElementById('gamesCount');
+var noResultsEl = document.getElementById('noResults');
+var filterAllBtn = document.getElementById('filterAll');
+var filterFavsBtn = document.getElementById('filterFavs');
+var favCountEl = document.getElementById('favCount');
+var randomBtn = document.getElementById('randomGameBtn');
+var showFavsOnly = false;
+
+var FAV_KEY = 'kd_favorite_games';
+function loadFavs(){
+  try{ return JSON.parse(localStorage.getItem(FAV_KEY) || '[]'); }catch(e){ return []; }
+}
+function saveFavs(list){
+  try{ localStorage.setItem(FAV_KEY, JSON.stringify(list)); }catch(e){}
+}
+var favorites = loadFavs();
+
+function isFav(key){ return favorites.indexOf(key) !== -1; }
+function toggleFav(key){
+  var i = favorites.indexOf(key);
+  if(i === -1){ favorites.push(key); } else { favorites.splice(i,1); }
+  saveFavs(favorites);
+  updateFavCount();
+}
+function updateFavCount(){ if(favCountEl){ favCountEl.textContent = '(' + favorites.length + ')'; } }
+
+Array.prototype.slice.call(document.querySelectorAll('.fav-btn')).forEach(function(btn){
+  var key = btn.getAttribute('data-key');
+  if(isFav(key)){ btn.classList.add('is-fav'); btn.setAttribute('aria-pressed','true'); }
+  btn.addEventListener('click', function(e){
+    e.preventDefault();
+    e.stopPropagation();
+    toggleFav(key);
+    var nowFav = isFav(key);
+    btn.classList.toggle('is-fav', nowFav);
+    btn.setAttribute('aria-pressed', nowFav ? 'true' : 'false');
+    if(showFavsOnly){ filterGames(); }
+  });
+});
+updateFavCount();
+
+function updateGamesCount(n){ if(gamesCountEl){ gamesCountEl.textContent = n + (n===1 ? ' game found' : ' games available'); } }
+updateGamesCount(gameCards.length);
+
+function filterGames(){
+  var q = gameSearch.value.trim().toLowerCase();
+  var visible = 0;
+  gameCards.forEach(function(card){
+    var name = (card.textContent || '').toLowerCase();
+    var textMatch = q === '' || name.indexOf(q) !== -1;
+    var favBtn = card.querySelector('.fav-btn');
+    var favMatch = !showFavsOnly || (favBtn && favBtn.classList.contains('is-fav'));
+    var match = textMatch && favMatch;
+    card.classList.toggle('is-hidden', !match);
+    if(match) visible++;
+  });
+  updateGamesCount(visible);
+  if(noResultsEl){
+    noResultsEl.textContent = showFavsOnly && visible === 0 && q === ''
+      ? 'No favorites yet - tap the star on any game to save it here.'
+      : 'No games match your search. Try a different keyword.';
+    noResultsEl.style.display = visible === 0 ? 'block' : 'none';
+  }
+  if(gameSearchClear){ gameSearchClear.hidden = q === ''; }
+}
+if(gameSearch){
+  gameSearch.addEventListener('input', filterGames);
+}
+if(gameSearchClear){
+  gameSearchClear.addEventListener('click', function(){
+    gameSearch.value = '';
+    filterGames();
+    gameSearch.focus();
+  });
+}
+if(filterAllBtn && filterFavsBtn){
+  filterAllBtn.addEventListener('click', function(){
+    showFavsOnly = false;
+    filterAllBtn.classList.add('is-active');
+    filterFavsBtn.classList.remove('is-active');
+    filterGames();
+  });
+  filterFavsBtn.addEventListener('click', function(){
+    showFavsOnly = true;
+    filterFavsBtn.classList.add('is-active');
+    filterAllBtn.classList.remove('is-active');
+    filterGames();
+  });
+}
+if(randomBtn){
+  randomBtn.addEventListener('click', function(){
+    var pool = gameCards.filter(function(card){ return !card.classList.contains('is-hidden'); });
+    if(pool.length === 0){ return; }
+    var pick = pool[Math.floor(Math.random() * pool.length)];
+    pick.scrollIntoView({behavior:'smooth', block:'center'});
+    pick.classList.remove('is-flash');
+    void pick.offsetWidth;
+    pick.classList.add('is-flash');
+    setTimeout(function(){
+      window.open(pick.getAttribute('href'), '_blank', 'noopener');
+    }, 550);
+  });
+}
+
 function shareX(){var u=window.location.href,t=document.title;window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(u)+'&text='+encodeURIComponent(t),'_blank');}
 function shareWhatsApp(){var u=window.location.href,t=document.title;window.open('https://wa.me/?text='+encodeURIComponent(t+' '+u),'_blank');}
 function shareReddit(){var u=window.location.href,t=document.title;window.open('https://www.reddit.com/submit?url='+encodeURIComponent(u)+'&title='+encodeURIComponent(t),'_blank');}
@@ -844,7 +1081,8 @@ function shareFacebook(){var u=window.location.href;window.open('https://www.fac
 function shareTelegram(){var u=window.location.href,t=document.title;window.open('https://t.me/share/url?url='+encodeURIComponent(u)+'&text='+encodeURIComponent(t),'_blank');}
 function copyLink(){
   var u=window.location.href;
-  var done=function(){var b=document.getElementById('copyBtn');var old=b.textContent;b.textContent='✅ Copied!';setTimeout(function(){b.textContent=old;},2000);};
+  var label = document.getElementById('copyLabel');
+  var done=function(){var old=label.textContent;label.textContent='Copied!';setTimeout(function(){label.textContent=old;},2000);};
   if(navigator.clipboard && navigator.clipboard.writeText){navigator.clipboard.writeText(u).then(done).catch(fallbackCopy);}
   else{fallbackCopy();}
   function fallbackCopy(){var ta=document.createElement('textarea');ta.value=u;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);done();}
