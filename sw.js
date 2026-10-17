@@ -1,17 +1,11 @@
-const CACHE_NAME = 'cache-v2';
+const CACHE_NAME = 'cache-v3';
 const urlsToCache = [
   '/index.html',
   '/privacy.html',
   '/termofuse.html',
-  '/index.js',
-  '/styles.css',
-  '/icons/icon-72x72.png',
-  '/icons/icon-96x96.png',
-  '/icons/icon-128x128.png',
-  '/icons/icon-144x144.png',
-  '/icons/icon-152x152.png',
+  '/index.js?v=2',
+  '/styles.css?v=2',
   '/icons/icon-192x192.png',
-  '/icons/icon-384x384.png',
   '/icons/icon-512x512.png',
 ];
 
