@@ -1,10 +1,10 @@
-const CACHE_NAME = 'cache-v3';
+const CACHE_NAME = 'cache-v4';
 const urlsToCache = [
   '/index.html',
   '/privacy.html',
   '/termofuse.html',
-  '/index.js?v=2',
-  '/styles.css?v=2',
+  '/index.js?v=2.1',
+  '/styles.css?v=2.1',
   '/icons/icon-192x192.png',
   '/icons/icon-512x512.png',
 ];
