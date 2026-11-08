@@ -771,4 +771,29 @@
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
 </url>
+<url>
+        <loc>https://kaloodinaz.github.io/freecell-game/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+</url>
+<url>
+        <loc>https://kaloodinaz.github.io/freecell-ko/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+</url>
+<url>
+        <loc>https://kaloodinaz.github.io/freecell-classic/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+</url>
+<url>
+        <loc>https://kaloodinaz.github.io/freecell-gratuit/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+</url>
+<url>
+        <loc>https://kaloodinaz.github.io/freecell-kostenlos-spielen/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+</url>
 </urlset>
